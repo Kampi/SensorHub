@@ -85,7 +85,7 @@ void setup()
 
 void loop()
 {
-    //System.sleep(SleepConfig);
+    System.sleep(SleepConfig);
 
     if(Network::Connect(TIMEOUT) == Network::NO_ERROR)
     {
@@ -122,6 +122,4 @@ void loop()
     {
         ErrorClass::DisplayError(ErrorClass::ERROR_NETWORK, Network::lastError());
     }
-
-    delay(1000);
 }

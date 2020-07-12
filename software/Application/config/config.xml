@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>SensorHub</Name>
+    <Version>1.1.0</Version>
+    <Title>SensorHub</Title>
+    <Publisher>https://www.kampis-elektroecke.de</Publisher>
+    <StartMenuDir>Kampis-Elektroecke</StartMenuDir>
+    <TargetDir>@HomeDir@/SensorH</TargetDir>
+	<InstallerApplicationIcon>icons8-3d-touch-96</InstallerApplicationIcon>
+	<WizardStyle>Modern</WizardStyle>
+</Installer>

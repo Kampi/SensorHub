@@ -24,7 +24,7 @@ F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME680-D
 F 4 "Bosch Sensortec " H 11121 2600 50  0001 R CNN "Mfr."
 F 5 "BMP680" H 11121 2509 50  0001 R CNN "Mfr. No."
 F 6 "Mouser" H 11550 2600 50  0001 C CNN "Distributor"
-F 7 "262-BME680 " H 11550 2600 50  0001 C CNN "Order Number"
+F 7 "262-BME680" H 11550 2600 50  0001 C CNN "Order Number"
 	1    11550 2600
 	1    0    0    -1  
 $EndComp
@@ -38,7 +38,7 @@ F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 9500 2650 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25095A.pdf" H 9500 2650 50  0001 C CNN
 F 4 "Microchip" H 9500 2650 50  0001 C CNN "Mfr."
 F 5 "MCP9808T-E/MS " H 9500 2650 50  0001 C CNN "Mfr. No."
-F 6 "" H 9500 2650 50  0001 C CNN "Mouser"
+F 6 "579-MCP9808T-E/MS " H 9500 2650 50  0001 C CNN "Mouser"
 F 7 "Mouser" H 9500 2650 50  0001 C CNN "Distributor"
 F 8 "579-MCP9808T-E/MS " H 9500 2650 50  0001 C CNN "Order Number"
 	1    9500 2650
@@ -464,8 +464,9 @@ F 1 "ENABLE" H 9250 6676 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_Omron_A6S-110x_W8.9mm_P2.54mm" H 9250 6500 50  0001 C CNN
 F 3 "~" H 9250 6500 50  0001 C CNN
 F 4 "Omron" H 9250 6857 50  0001 C CNN "Mfr."
-F 5 "A6S-1104-PH " H 9250 6766 50  0001 C CNN "Mfr. No."
+F 5 "A6S-1104-PH" H 9250 6766 50  0001 C CNN "Mfr. No."
 F 6 "653-A6S1104PH" H 9250 6500 50  0001 C CNN "Order Number"
+F 7 "Mouser" H 9250 6500 50  0001 C CNN "Distributor"
 	1    9250 6500
 	1    0    0    -1  
 $EndComp
@@ -633,9 +634,9 @@ P 1850 2300
 F 0 "RV1" V 1850 2350 50  0000 R CNN
 F 1 "10k" V 1750 2350 50  0000 R CNN
 F 2 "Potentiometer_SMD_Kampi:Potentiometer_Vishay_TS53YJ_Vertical" H 1850 2300 50  0001 C CNN
-F 3 "~" H 1850 2300 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/427/ts53-1763731.pdf" H 1850 2300 50  0001 C CNN
 F 4 "Vishay" H 1780 2300 50  0001 R CNN "Mfr."
-F 5 "TS53YJ103MR10 " H 1780 2391 50  0001 R CNN "Mfr. No."
+F 5 "TS53YJ103MR10" H 1780 2391 50  0001 R CNN "Mfr. No."
 F 6 "Mouser" H 1850 2300 50  0001 C CNN "Distributor"
 F 7 "72-TS53YJ-10K " H 1850 2300 50  0001 C CNN "Order Number"
 	1    1850 2300
@@ -708,16 +709,12 @@ F 7 "279-CRGP0805F10K" H 1300 2800 50  0001 C CNN "Order Number"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1850 4100 1850 4200
-Wire Wire Line
 	1850 4200 2400 4200
 Connection ~ 2400 4200
 Wire Wire Line
 	2400 4200 2400 4350
 Wire Wire Line
 	1900 3600 1850 3600
-Wire Wire Line
-	1850 3600 1850 3800
 $Comp
 L Device:R R4
 U 1 1 5EC126EC
@@ -901,21 +898,6 @@ F 6 "Mouser" H 1600 8575 50  0001 C CNN "Distributor"
 F 7 "810-C2012X7S1E106125" H 1600 8575 50  0001 C CNN "Order Number"
 	1    1600 8575
 	1    0    0    1   
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 5EE01B4B
-P 1850 3950
-F 0 "C1" H 1965 3996 50  0000 L CNN
-F 1 "1uF" H 1965 3905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1888 3800 50  0001 C CNN
-F 3 "~" H 1850 3950 50  0001 C CNN
-F 4 "Kemet" H 1850 3950 50  0001 C CNN "Mfr."
-F 5 "C0805X105K3RAC3316" H 1850 3950 50  0001 C CNN "Mfr. No."
-F 6 "Mouser" H 1850 3950 50  0001 C CNN "Distributor"
-F 7 "80-C0805X105K3R3316" H 1850 3950 50  0001 C CNN "Order Number"
-	1    1850 3950
-	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R6
@@ -1560,4 +1542,6 @@ Text Notes 1725 10950 0    100  ~ 0
 0x38
 Text Notes 5450 6300 0    50   ~ 0
 The voltage divider is designed\nfor a 17.8 V solar panel.
+Wire Wire Line
+	1850 3600 1850 4200
 $EndSCHEMATC

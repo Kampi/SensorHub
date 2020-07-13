@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>G:\Dropbox\Git\SensorHub\hardware\SensorHub.sch</source>
-    <date>02.07.2020 19:46:59</date>
+    <source>C:\Users\Daniel.Kampert\Desktop\Git\SensorHub\hardware\SensorHub.sch</source>
+    <date>13.07.2020 13:22:57</date>
     <tool>Eeschema (5.1.6)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Sensor Hub</title>
         <company>https://www.kampis-elektroecke.de</company>
-        <rev>1.0</rev>
-        <date>2020-05-05</date>
+        <rev>1.1</rev>
+        <date>2020-07-11</date>
         <source>SensorHub.sch</source>
         <comment number="1" value="Author: Daniel Kampert"/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
-        <comment number="4" value="Sensor Hub Schematics"/>
+        <comment number="4" value="Sensor Hub"/>
       </title_block>
     </sheet>
   </design>
@@ -348,20 +348,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EDD4380</tstamp>
     </comp>
-    <comp ref="C1">
-      <value>1uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
-      <fields>
-        <field name="Distributor">Mouser</field>
-        <field name="Mfr.">Kemet</field>
-        <field name="Mfr. No.">C0805X105K3RAC3316</field>
-        <field name="Order Number">80-C0805X105K3R3316</field>
-      </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5EE01B4B</tstamp>
-    </comp>
     <comp ref="R6">
       <value>220k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
@@ -419,17 +405,29 @@
       <tstamp>5F070109</tstamp>
     </comp>
     <comp ref="R9">
-      <value>NB</value>
+      <value>22k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf</datasheet>
+      <fields>
+        <field name="Distributor">Mouser</field>
+        <field name="Mfr.">Vishay / Dale</field>
+        <field name="Mfr. No.">TNPW080522K0BEEA</field>
+        <field name="Order Number">71-TNPW080522K0BEEA</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EC304C7</tstamp>
     </comp>
     <comp ref="R8">
-      <value>NB</value>
+      <value>100k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf</datasheet>
+      <fields>
+        <field name="Distributor">Mouser</field>
+        <field name="Mfr.">Vishay / Draloric</field>
+        <field name="Mfr. No.">TNPW0805100KBYEA</field>
+        <field name="Order Number">71-TNPW0805100KBYEA</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EC304D1</tstamp>
@@ -486,7 +484,7 @@
         <field name="Mfr. No.">VEML6070</field>
         <field name="Order Number">78-VEML6070</field>
       </fields>
-      <libsource lib="Vishay" part="VEML6070" description=""/>
+      <libsource lib="SensorHub-rescue" part="VEML6070-Vishay" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5ED48DF7</tstamp>
     </comp>
@@ -826,6 +824,21 @@
         <pin num="8" name="VDD" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="SensorHub-rescue" part="VEML6070-Vishay">
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">VEML6070-Vishay</field>
+        <field name="Footprint">Package_LGA_Kampi:OPLGA-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="ACK" type="openCol"/>
+        <pin num="3" name="SDA" type="BiDi"/>
+        <pin num="4" name="RESET" type="input"/>
+        <pin num="5" name="SCL" type="BiDi"/>
+        <pin num="6" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
     <libpart lib="Switch" part="SW_DIP_x01">
       <description>1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol</description>
       <docs>~</docs>
@@ -841,275 +854,255 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Vishay" part="VEML6070">
-      <docs>https://www.vishay.com/docs/84277/veml6070.pdf</docs>
-      <fields>
-        <field name="Reference">IC</field>
-        <field name="Value">VEML6070</field>
-        <field name="Footprint">Package_LGA_Kampi:OPLGA-6</field>
-      </fields>
-      <pins>
-        <pin num="1" name="GND" type="power_in"/>
-        <pin num="2" name="ACK" type="openCol"/>
-        <pin num="3" name="SDA" type="BiDi"/>
-        <pin num="4" name="RESET" type="input"/>
-        <pin num="5" name="SCL" type="BiDi"/>
-        <pin num="6" name="VCC" type="power_in"/>
-      </pins>
-    </libpart>
   </libparts>
   <libraries>
     <library logical="Battery_Management">
-      <uri>D:\KiCad\share\kicad\library/Battery_Management.lib</uri>
+      <uri>C:\Program Files\KiCad\share\kicad\library/Battery_Management.lib</uri>
     </library>
     <library logical="Connector">
-      <uri>D:\KiCad\share\kicad\library/Connector.lib</uri>
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
     </library>
     <library logical="Connector_Generic">
-      <uri>D:\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
     </library>
     <library logical="DevBoards">
-      <uri>G:\Dropbox\Git\KiCAD/Symbols/DevBoards.lib</uri>
+      <uri>C:/Users/Daniel.Kampert/Desktop/Git/KiCAD/Symbols/DevBoards.lib</uri>
     </library>
     <library logical="Device">
-      <uri>D:\KiCad\share\kicad\library/Device.lib</uri>
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
     </library>
     <library logical="Microchip">
-      <uri>G:\Dropbox\Git\KiCAD/Symbols/Microchip.lib</uri>
+      <uri>C:/Users/Daniel.Kampert/Desktop/Git/KiCAD/Symbols/Microchip.lib</uri>
     </library>
     <library logical="Rohm">
-      <uri>G:\Dropbox\Git\KiCAD/Symbols/Rohm.lib</uri>
+      <uri>C:/Users/Daniel.Kampert/Desktop/Git/KiCAD/Symbols/Rohm.lib</uri>
     </library>
     <library logical="Sensor">
-      <uri>D:\KiCad\share\kicad\library/Sensor.lib</uri>
+      <uri>C:\Program Files\KiCad\share\kicad\library/Sensor.lib</uri>
+    </library>
+    <library logical="SensorHub-rescue">
+      <uri>C:\Users\Daniel.Kampert\Desktop\Git\SensorHub\hardware/SensorHub-rescue.lib</uri>
     </library>
     <library logical="Switch">
-      <uri>D:\KiCad\share\kicad\library/Switch.lib</uri>
-    </library>
-    <library logical="Vishay">
-      <uri>G:\Dropbox\Git\KiCAD/Symbols/Vishay.lib</uri>
+      <uri>C:\Program Files\KiCad\share\kicad\library/Switch.lib</uri>
     </library>
   </libraries>
   <nets>
     <net code="1" name="Net-(IC2-Pad8)">
-      <node ref="IC2" pin="8"/>
       <node ref="R3" pin="1"/>
+      <node ref="IC2" pin="8"/>
     </net>
-    <net code="2" name="Net-(C3-Pad2)">
-      <node ref="D1" pin="1"/>
-      <node ref="L1" pin="2"/>
-      <node ref="C3" pin="2"/>
+    <net code="2" name="Net-(IC2-Pad7)">
+      <node ref="IC2" pin="7"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="3" name="Net-(C3-Pad2)">
       <node ref="IC2" pin="12"/>
+      <node ref="L1" pin="2"/>
+      <node ref="D1" pin="1"/>
+      <node ref="C3" pin="2"/>
     </net>
-    <net code="3" name="VS">
-      <node ref="X2" pin="1"/>
+    <net code="4" name="VS">
       <node ref="R8" pin="1"/>
-      <node ref="C9" pin="2"/>
       <node ref="RV1" pin="3"/>
-      <node ref="IC2" pin="1"/>
+      <node ref="X2" pin="1"/>
       <node ref="IC2" pin="3"/>
+      <node ref="C9" pin="2"/>
+      <node ref="IC2" pin="1"/>
     </net>
-    <net code="4" name="+3V3">
+    <net code="5" name="+3V3">
+      <node ref="C2" pin="1"/>
+      <node ref="IC1" pin="6"/>
+      <node ref="X1" pin="1"/>
+      <node ref="M1" pin="2"/>
       <node ref="IC3" pin="8"/>
+      <node ref="IC3" pin="6"/>
       <node ref="IC3" pin="2"/>
       <node ref="C8" pin="1"/>
-      <node ref="IC3" pin="6"/>
-      <node ref="R13" pin="1"/>
-      <node ref="X1" pin="1"/>
+      <node ref="IC4" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R12" pin="1"/>
       <node ref="C7" pin="1"/>
       <node ref="C6" pin="1"/>
-      <node ref="IC1" pin="6"/>
       <node ref="IC5" pin="8"/>
       <node ref="R10" pin="1"/>
       <node ref="R11" pin="1"/>
-      <node ref="IC4" pin="2"/>
-      <node ref="R15" pin="1"/>
-      <node ref="R14" pin="1"/>
+      <node ref="R13" pin="1"/>
       <node ref="R2" pin="1"/>
-      <node ref="R12" pin="1"/>
-      <node ref="C2" pin="1"/>
-      <node ref="R1" pin="2"/>
-      <node ref="M1" pin="2"/>
+      <node ref="R14" pin="1"/>
+      <node ref="R15" pin="1"/>
     </net>
-    <net code="5" name="/~CHRG">
-      <node ref="IC2" pin="4"/>
-      <node ref="M1" pin="21"/>
-      <node ref="R2" pin="2"/>
-    </net>
-    <net code="6" name="/~FAULT">
-      <node ref="R1" pin="1"/>
-      <node ref="M1" pin="22"/>
-      <node ref="IC2" pin="5"/>
-    </net>
-    <net code="7" name="Net-(IC2-Pad10)">
+    <net code="6" name="Net-(IC2-Pad10)">
       <node ref="R7" pin="2"/>
       <node ref="L1" pin="1"/>
       <node ref="IC2" pin="10"/>
     </net>
-    <net code="8" name="GND">
-      <node ref="RV1" pin="1"/>
+    <net code="7" name="GND">
       <node ref="X1" pin="4"/>
-      <node ref="IC3" pin="7"/>
-      <node ref="C5" pin="2"/>
+      <node ref="RV1" pin="1"/>
+      <node ref="D1" pin="2"/>
+      <node ref="R6" pin="1"/>
       <node ref="IC5" pin="4"/>
-      <node ref="IC5" pin="5"/>
-      <node ref="IC5" pin="6"/>
-      <node ref="IC5" pin="7"/>
-      <node ref="IC4" pin="1"/>
-      <node ref="IC4" pin="3"/>
       <node ref="IC4" pin="4"/>
-      <node ref="C4" pin="2"/>
+      <node ref="IC4" pin="3"/>
+      <node ref="IC4" pin="1"/>
+      <node ref="IC5" pin="7"/>
+      <node ref="IC5" pin="6"/>
+      <node ref="IC5" pin="5"/>
+      <node ref="IC3" pin="7"/>
+      <node ref="IC3" pin="5"/>
+      <node ref="C8" pin="2"/>
+      <node ref="R9" pin="1"/>
       <node ref="C6" pin="2"/>
       <node ref="C7" pin="2"/>
-      <node ref="C8" pin="2"/>
-      <node ref="IC3" pin="5"/>
-      <node ref="R6" pin="1"/>
-      <node ref="R16" pin="2"/>
+      <node ref="IC2" pin="6"/>
       <node ref="C9" pin="1"/>
-      <node ref="C1" pin="1"/>
-      <node ref="D1" pin="2"/>
-      <node ref="IC3" pin="1"/>
-      <node ref="M1" pin="4"/>
       <node ref="IC1" pin="1"/>
-      <node ref="R3" pin="2"/>
-      <node ref="IC2" pin="13"/>
-      <node ref="C2" pin="2"/>
-      <node ref="X2" pin="3"/>
+      <node ref="M1" pin="4"/>
       <node ref="SW1" pin="2"/>
-      <node ref="R9" pin="1"/>
+      <node ref="R16" pin="2"/>
+      <node ref="IC3" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="IC2" pin="13"/>
+      <node ref="X2" pin="3"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="8" name="Net-(M1-Pad5)">
+      <node ref="R9" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="M1" pin="5"/>
     </net>
     <net code="9" name="/WindSensor">
-      <node ref="X1" pin="2"/>
       <node ref="R12" pin="2"/>
       <node ref="M1" pin="23"/>
+      <node ref="X1" pin="2"/>
     </net>
-    <net code="10" name="Net-(IC2-Pad7)">
-      <node ref="R4" pin="1"/>
-      <node ref="IC2" pin="7"/>
+    <net code="10" name="/~CHRG">
+      <node ref="M1" pin="21"/>
+      <node ref="IC2" pin="4"/>
+      <node ref="R2" pin="2"/>
     </net>
-    <net code="11" name="Net-(C1-Pad2)">
-      <node ref="C1" pin="2"/>
-      <node ref="IC2" pin="6"/>
+    <net code="11" name="/~FAULT">
+      <node ref="IC2" pin="5"/>
+      <node ref="R1" pin="1"/>
+      <node ref="M1" pin="22"/>
     </net>
     <net code="12" name="Net-(C3-Pad1)">
       <node ref="C3" pin="1"/>
-      <node ref="IC2" pin="11"/>
       <node ref="D2" pin="1"/>
+      <node ref="IC2" pin="11"/>
     </net>
-    <net code="13" name="/SDA">
-      <node ref="IC3" pin="3"/>
-      <node ref="IC5" pin="1"/>
-      <node ref="IC1" pin="3"/>
-      <node ref="M1" pin="17"/>
-      <node ref="R11" pin="2"/>
-      <node ref="IC4" pin="6"/>
+    <net code="13" name="/SCL">
+      <node ref="IC4" pin="5"/>
+      <node ref="M1" pin="18"/>
+      <node ref="R10" pin="2"/>
+      <node ref="IC1" pin="5"/>
+      <node ref="IC3" pin="4"/>
+      <node ref="IC5" pin="2"/>
     </net>
     <net code="14" name="/VEML_ACK">
-      <node ref="IC1" pin="2"/>
-      <node ref="R13" pin="2"/>
       <node ref="M1" pin="24"/>
+      <node ref="R13" pin="2"/>
+      <node ref="IC1" pin="2"/>
     </net>
-    <net code="15" name="/SCL">
-      <node ref="M1" pin="18"/>
-      <node ref="IC1" pin="5"/>
-      <node ref="R10" pin="2"/>
-      <node ref="IC4" pin="5"/>
-      <node ref="IC5" pin="2"/>
-      <node ref="IC3" pin="4"/>
+    <net code="15" name="/SDA">
+      <node ref="IC1" pin="3"/>
+      <node ref="R11" pin="2"/>
+      <node ref="M1" pin="17"/>
+      <node ref="IC3" pin="3"/>
+      <node ref="IC5" pin="1"/>
+      <node ref="IC4" pin="6"/>
     </net>
     <net code="16" name="Net-(IC1-Pad4)">
-      <node ref="R16" pin="1"/>
       <node ref="IC1" pin="4"/>
+      <node ref="R16" pin="1"/>
     </net>
-    <net code="17" name="Net-(M1-Pad7)">
-      <node ref="M1" pin="7"/>
+    <net code="17" name="Net-(M1-Pad9)">
+      <node ref="M1" pin="9"/>
     </net>
-    <net code="18" name="Net-(M1-Pad5)">
-      <node ref="R8" pin="2"/>
-      <node ref="R9" pin="2"/>
-      <node ref="M1" pin="5"/>
-    </net>
-    <net code="19" name="Net-(M1-Pad3)">
-      <node ref="M1" pin="3"/>
-    </net>
-    <net code="20" name="Net-(M1-Pad27)">
-      <node ref="M1" pin="27"/>
-      <node ref="SW1" pin="1"/>
-    </net>
-    <net code="21" name="+5V">
-      <node ref="M1" pin="26"/>
-    </net>
-    <net code="22" name="Net-(M1-Pad25)">
-      <node ref="M1" pin="25"/>
-    </net>
-    <net code="23" name="/~TempAlert">
-      <node ref="IC5" pin="3"/>
-      <node ref="R15" pin="2"/>
-      <node ref="M1" pin="20"/>
-    </net>
-    <net code="24" name="Net-(M1-Pad8)">
+    <net code="18" name="Net-(M1-Pad8)">
       <node ref="M1" pin="8"/>
     </net>
-    <net code="25" name="Net-(M1-Pad16)">
+    <net code="19" name="Net-(M1-Pad7)">
+      <node ref="M1" pin="7"/>
+    </net>
+    <net code="20" name="/WindDirection">
+      <node ref="X1" pin="3"/>
+      <node ref="M1" pin="6"/>
+    </net>
+    <net code="21" name="Net-(M1-Pad3)">
+      <node ref="M1" pin="3"/>
+    </net>
+    <net code="22" name="Net-(M1-Pad27)">
+      <node ref="SW1" pin="1"/>
+      <node ref="M1" pin="27"/>
+    </net>
+    <net code="23" name="+5V">
+      <node ref="M1" pin="26"/>
+    </net>
+    <net code="24" name="Net-(M1-Pad25)">
+      <node ref="M1" pin="25"/>
+    </net>
+    <net code="25" name="/~TempAlert">
+      <node ref="R15" pin="2"/>
+      <node ref="M1" pin="20"/>
+      <node ref="IC5" pin="3"/>
+    </net>
+    <net code="26" name="Net-(M1-Pad16)">
       <node ref="M1" pin="16"/>
     </net>
-    <net code="26" name="Net-(M1-Pad15)">
+    <net code="27" name="Net-(M1-Pad15)">
       <node ref="M1" pin="15"/>
     </net>
-    <net code="27" name="Net-(M1-Pad14)">
+    <net code="28" name="Net-(M1-Pad14)">
       <node ref="M1" pin="14"/>
     </net>
-    <net code="28" name="Net-(M1-Pad13)">
+    <net code="29" name="Net-(M1-Pad13)">
       <node ref="M1" pin="13"/>
     </net>
-    <net code="29" name="Net-(M1-Pad12)">
+    <net code="30" name="Net-(M1-Pad12)">
       <node ref="M1" pin="12"/>
     </net>
-    <net code="30" name="Net-(M1-Pad11)">
+    <net code="31" name="Net-(M1-Pad11)">
       <node ref="M1" pin="11"/>
     </net>
-    <net code="31" name="Net-(M1-Pad10)">
+    <net code="32" name="Net-(M1-Pad10)">
       <node ref="M1" pin="10"/>
     </net>
-    <net code="32" name="Net-(M1-Pad1)">
+    <net code="33" name="Net-(M1-Pad1)">
       <node ref="M1" pin="1"/>
-    </net>
-    <net code="33" name="/WindDirection">
-      <node ref="M1" pin="6"/>
-      <node ref="X1" pin="3"/>
     </net>
     <net code="34" name="Net-(X2-Pad2)">
       <node ref="X2" pin="2"/>
     </net>
-    <net code="35" name="Net-(M1-Pad9)">
-      <node ref="M1" pin="9"/>
-    </net>
-    <net code="36" name="Net-(IC4-Pad8)">
+    <net code="35" name="Net-(IC4-Pad8)">
       <node ref="IC4" pin="8"/>
     </net>
-    <net code="37" name="Net-(IC2-Pad2)">
+    <net code="36" name="Net-(IC2-Pad2)">
       <node ref="RV1" pin="2"/>
-      <node ref="IC2" pin="2"/>
       <node ref="TP1" pin="1"/>
+      <node ref="IC2" pin="2"/>
     </net>
-    <net code="38" name="/LiPo+">
-      <node ref="R7" pin="1"/>
-      <node ref="IC2" pin="9"/>
-      <node ref="C5" pin="1"/>
+    <net code="37" name="/LiPo+">
       <node ref="D2" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C4" pin="1"/>
       <node ref="R5" pin="2"/>
       <node ref="M1" pin="28"/>
-      <node ref="C4" pin="1"/>
+      <node ref="R7" pin="1"/>
+      <node ref="IC2" pin="9"/>
     </net>
-    <net code="39" name="Net-(R4-Pad2)">
+    <net code="38" name="Net-(R4-Pad2)">
       <node ref="R4" pin="2"/>
       <node ref="R5" pin="1"/>
       <node ref="R6" pin="2"/>
     </net>
-    <net code="40" name="/LightAlert">
-      <node ref="M1" pin="19"/>
+    <net code="39" name="/LightAlert">
       <node ref="IC4" pin="7"/>
       <node ref="R14" pin="2"/>
+      <node ref="M1" pin="19"/>
     </net>
   </nets>
 </export>

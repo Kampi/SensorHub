@@ -5,8 +5,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "Sensor Hub"
-Date "2020-07-11"
-Rev "1.1"
+Date "2020-07-13"
+Rev "1.2"
 Comp "https://www.kampis-elektroecke.de"
 Comment1 "Author: Daniel Kampert"
 Comment2 ""

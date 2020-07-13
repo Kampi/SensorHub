@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Sensor Hub"
 Date "2020-07-11"
-Rev "1.1"
+Rev "1.2"
 Comp "https://www.kampis-elektroecke.de"
 Comment1 "Author: Daniel Kampert"
 Comment2 ""
@@ -820,13 +820,13 @@ L Device:L L1
 U 1 1 5ECFD6B7
 P 3700 2650
 F 0 "L1" V 3775 2650 50  0000 C CNN
-F 1 "68uH" V 3850 2650 50  0000 C CNN
+F 1 "33uH" V 3850 2650 50  0000 C CNN
 F 2 "Inductor_SMD:L_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3700 2650 50  0001 C CNN
-F 3 "~" H 3700 2650 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/427/idc2512-1762893.pdf" H 3700 2650 50  0001 C CNN
 F 4 "Vishay / Dale" V 3981 2650 50  0001 C CNN "Mfr."
-F 5 "IDC2512ER680M" V 3890 2650 50  0001 C CNN "Mfr. No."
+F 5 "IDC2512ER330M" V 3890 2650 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 3700 2650 50  0001 C CNN "Distributor"
-F 7 "70-IDC2512ER680M" H 3700 2650 50  0001 C CNN "Order Number"
+F 7 "70-IDC2512ER330M" H 3700 2650 50  0001 C CNN "Order Number"
 	1    3700 2650
 	0    1    1    0   
 $EndComp
@@ -1184,7 +1184,7 @@ Wire Wire Line
 Text Notes 750  900  0    50   ~ 0
 - Connect NTC with battery pack (optional).\n
 Text Notes 750  750  0    50   ~ 0
-- Set the voltage at the SET testpoint to 2.8 V in maximum sun.
+- Set the voltage at the SET testpoint to >2.7 V in maximum sun.
 Text Notes 775  10100 0    100  ~ 20
 Device
 Text Notes 1725 10100 0    100  ~ 20

@@ -1,0 +1,1546 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "Sensor Hub"
+Date "2020-07-11"
+Rev "1.1"
+Comp "https://www.kampis-elektroecke.de"
+Comment1 "Author: Daniel Kampert"
+Comment2 ""
+Comment3 ""
+Comment4 "Sensor Hub"
+$EndDescr
+$Comp
+L Sensor:BME680 IC3
+U 1 1 5EB10C35
+P 11550 2600
+F 0 "IC3" H 11300 3050 50  0000 R CNN
+F 1 "BME680" H 11450 2150 50  0000 R CNN
+F 2 "Bosch:Bosch_LGA-8_3x3mm_P0.8mm_ClockwisePinNumbering" H 13000 2150 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME680-DS001.pdf" H 11550 2400 50  0001 C CNN
+F 4 "Bosch Sensortec " H 11121 2600 50  0001 R CNN "Mfr."
+F 5 "BMP680" H 11121 2509 50  0001 R CNN "Mfr. No."
+F 6 "Mouser" H 11550 2600 50  0001 C CNN "Distributor"
+F 7 "262-BME680 " H 11550 2600 50  0001 C CNN "Order Number"
+	1    11550 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microchip:MCP9808 IC5
+U 1 1 5EB150D0
+P 9500 2650
+F 0 "IC5" H 9200 3100 50  0000 L CNN
+F 1 "MCP9808" H 9200 2200 50  0000 L CNN
+F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 9500 2650 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25095A.pdf" H 9500 2650 50  0001 C CNN
+F 4 "Microchip" H 9500 2650 50  0001 C CNN "Mfr."
+F 5 "MCP9808T-E/MS " H 9500 2650 50  0001 C CNN "Mfr. No."
+F 6 "" H 9500 2650 50  0001 C CNN "Mouser"
+F 7 "Mouser" H 9500 2650 50  0001 C CNN "Distributor"
+F 8 "579-MCP9808T-E/MS " H 9500 2650 50  0001 C CNN "Order Number"
+	1    9500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Rohm:BH1726 IC4
+U 1 1 5EB15BA9
+P 7125 2700
+F 0 "IC4" H 6875 3150 50  0000 C CNN
+F 1 "BH1726" H 6975 2250 50  0000 C CNN
+F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" H 7125 2700 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/348/bh1726nuc-e-1808696.pdf" H 7125 2700 50  0001 C CNN
+F 4 "Rohm Semiconductor" H 7125 2700 50  0001 C CNN "Mfr."
+F 5 "BH1726NUC-E2 " H 7125 2700 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 7125 2700 50  0001 C CNN "Distributor"
+F 7 "755-BH1726NUC-E2" H 7125 2700 50  0001 C CNN "Order Number"
+	1    7125 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5EB18313
+P 9700 7600
+F 0 "R11" V 9700 7550 50  0000 L CNN
+F 1 "3k3" V 9800 7550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9630 7600 50  0001 C CNN
+F 3 "~" H 9700 7600 50  0001 C CNN
+F 4 "TE Connectivity" H 9700 7600 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F3K3" H 9700 7600 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 9700 7600 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F3K3" H 9700 7600 50  0001 C CNN "Order Number"
+	1    9700 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5EB194D6
+P 9600 7600
+F 0 "R10" V 9600 7550 50  0000 L CNN
+F 1 "3k3" V 9500 7550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9530 7600 50  0001 C CNN
+F 3 "~" H 9600 7600 50  0001 C CNN
+F 4 "TE Connectivity" H 9600 7600 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F3K3" H 9600 7600 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 9600 7600 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F3K3" H 9600 7600 50  0001 C CNN "Order Number"
+	1    9600 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR027
+U 1 1 5EB1B673
+P 7300 5550
+F 0 "#PWR027" H 7300 5400 50  0001 C CNN
+F 1 "+3.3V" H 7315 5723 50  0000 C CNN
+F 2 "" H 7300 5550 50  0001 C CNN
+F 3 "" H 7300 5550 50  0001 C CNN
+	1    7300 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 5EB1C0B8
+P 8200 8200
+F 0 "#PWR029" H 8200 7950 50  0001 C CNN
+F 1 "GND" H 8205 8027 50  0000 C CNN
+F 2 "" H 8200 8200 50  0001 C CNN
+F 3 "" H 8200 8200 50  0001 C CNN
+	1    8200 8200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 8100 8200 8200
+Wire Wire Line
+	7300 5950 7300 5550
+$Comp
+L power:+5V #PWR028
+U 1 1 5EB1D40F
+P 8200 5550
+F 0 "#PWR028" H 8200 5400 50  0001 C CNN
+F 1 "+5V" H 8215 5723 50  0000 C CNN
+F 2 "" H 8200 5550 50  0001 C CNN
+F 3 "" H 8200 5550 50  0001 C CNN
+	1    8200 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 5600 8200 5550
+Wire Wire Line
+	7300 5950 7600 5950
+$Comp
+L power:GND #PWR035
+U 1 1 5EB2FAE5
+P 1450 8825
+F 0 "#PWR035" H 1450 8575 50  0001 C CNN
+F 1 "GND" H 1455 8652 50  0000 C CNN
+F 2 "" H 1450 8825 50  0001 C CNN
+F 3 "" H 1450 8825 50  0001 C CNN
+	1    1450 8825
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR031
+U 1 1 5EB349A6
+P 9650 7300
+F 0 "#PWR031" H 9650 7150 50  0001 C CNN
+F 1 "+3.3V" H 9665 7473 50  0000 C CNN
+F 2 "" H 9650 7300 50  0001 C CNN
+F 3 "" H 9650 7300 50  0001 C CNN
+	1    9650 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 7800 9600 7800
+Wire Wire Line
+	9600 7800 9600 7750
+Wire Wire Line
+	8800 7900 9700 7900
+Wire Wire Line
+	9700 7900 9700 7750
+Wire Wire Line
+	9600 7450 9600 7400
+Wire Wire Line
+	9600 7400 9650 7400
+Wire Wire Line
+	9650 7300 9650 7400
+Wire Wire Line
+	9650 7400 9700 7400
+Wire Wire Line
+	9700 7400 9700 7450
+Connection ~ 9650 7400
+Wire Wire Line
+	9600 7800 10100 7800
+Connection ~ 9600 7800
+Wire Wire Line
+	9700 7900 10100 7900
+Connection ~ 9700 7900
+Text Label 10100 7900 0    50   ~ 0
+SDA
+Text Label 10100 7800 0    50   ~ 0
+SCL
+$Comp
+L Device:C C8
+U 1 1 5EB37B26
+P 11900 1750
+F 0 "C8" H 12015 1796 50  0000 L CNN
+F 1 "100nF" H 12015 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 11938 1600 50  0001 C CNN
+F 3 "~" H 11900 1750 50  0001 C CNN
+F 4 "Kemet" H 11900 1750 50  0001 C CNN "Mfr."
+F 5 "C0805C104K5RAC7411" H 11900 1750 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 11900 1750 50  0001 C CNN "Distributor"
+F 7 "80-C0805C104K5RACLR" H 11900 1750 50  0001 C CNN "Order Number"
+	1    11900 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5EB38582
+P 11550 3400
+F 0 "#PWR015" H 11550 3150 50  0001 C CNN
+F 1 "GND" H 11555 3227 50  0000 C CNN
+F 2 "" H 11550 3400 50  0001 C CNN
+F 3 "" H 11550 3400 50  0001 C CNN
+	1    11550 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11450 3200 11450 3300
+Wire Wire Line
+	11450 3300 11550 3300
+Wire Wire Line
+	11550 3300 11550 3400
+Wire Wire Line
+	11550 3300 11650 3300
+Wire Wire Line
+	11650 3300 11650 3200
+Connection ~ 11550 3300
+Wire Wire Line
+	11450 1900 11550 1900
+Wire Wire Line
+	11650 1900 11650 2000
+$Comp
+L power:GND #PWR022
+U 1 1 5EB3A2C3
+P 11900 1950
+F 0 "#PWR022" H 11900 1700 50  0001 C CNN
+F 1 "GND" H 11905 1777 50  0000 C CNN
+F 2 "" H 11900 1950 50  0001 C CNN
+F 3 "" H 11900 1950 50  0001 C CNN
+	1    11900 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11550 1900 11550 1550
+Connection ~ 11550 1900
+Wire Wire Line
+	11550 1900 11650 1900
+$Comp
+L power:+3.3V #PWR014
+U 1 1 5EB3BEC1
+P 11550 1450
+F 0 "#PWR014" H 11550 1300 50  0001 C CNN
+F 1 "+3.3V" H 11565 1623 50  0000 C CNN
+F 2 "" H 11550 1450 50  0001 C CNN
+F 3 "" H 11550 1450 50  0001 C CNN
+	1    11550 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11550 1550 11900 1550
+Connection ~ 11550 1550
+$Comp
+L power:+3.3V #PWR023
+U 1 1 5EB3DBB5
+P 12350 2900
+F 0 "#PWR023" H 12350 2750 50  0001 C CNN
+F 1 "+3.3V" H 12365 3073 50  0000 C CNN
+F 2 "" H 12350 2900 50  0001 C CNN
+F 3 "" H 12350 2900 50  0001 C CNN
+	1    12350 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12350 2900 12150 2900
+Wire Wire Line
+	12150 2700 12400 2700
+Text Label 12400 2700 0    50   ~ 0
+SDA
+Text Label 12400 2500 0    50   ~ 0
+SCL
+Wire Wire Line
+	12150 2500 12400 2500
+$Comp
+L power:GND #PWR024
+U 1 1 5EB40B61
+P 12350 2300
+F 0 "#PWR024" H 12350 2050 50  0001 C CNN
+F 1 "GND" H 12355 2127 50  0000 C CNN
+F 2 "" H 12350 2300 50  0001 C CNN
+F 3 "" H 12350 2300 50  0001 C CNN
+	1    12350 2300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12350 2300 12150 2300
+$Comp
+L power:GND #PWR012
+U 1 1 5EB43658
+P 6575 3400
+F 0 "#PWR012" H 6575 3150 50  0001 C CNN
+F 1 "GND" H 6580 3227 50  0000 C CNN
+F 2 "" H 6575 3400 50  0001 C CNN
+F 3 "" H 6575 3400 50  0001 C CNN
+	1    6575 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6725 3000 6575 3000
+Wire Wire Line
+	6575 3000 6575 3400
+$Comp
+L power:GND #PWR017
+U 1 1 5EB4736C
+P 7125 3400
+F 0 "#PWR017" H 7125 3150 50  0001 C CNN
+F 1 "GND" H 7130 3227 50  0000 C CNN
+F 2 "" H 7125 3400 50  0001 C CNN
+F 3 "" H 7125 3400 50  0001 C CNN
+	1    7125 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7125 3200 7125 3400
+$Comp
+L Device:C C6
+U 1 1 5EB48C26
+P 7400 1850
+F 0 "C6" H 7515 1896 50  0000 L CNN
+F 1 "100nF" H 7515 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7438 1700 50  0001 C CNN
+F 3 "~" H 7400 1850 50  0001 C CNN
+F 4 "Kemet" H 7400 1850 50  0001 C CNN "Mfr."
+F 5 "C0805C104K5RAC7411" H 7400 1850 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 7400 1850 50  0001 C CNN "Distributor"
+F 7 "80-C0805C104K5RACLR" H 7400 1850 50  0001 C CNN "Order Number"
+	1    7400 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5EB48C2F
+P 7400 2050
+F 0 "#PWR020" H 7400 1800 50  0001 C CNN
+F 1 "GND" H 7405 1877 50  0000 C CNN
+F 2 "" H 7400 2050 50  0001 C CNN
+F 3 "" H 7400 2050 50  0001 C CNN
+	1    7400 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2050 7400 2000
+$Comp
+L power:+3.3V #PWR016
+U 1 1 5EB48C3A
+P 7125 1450
+F 0 "#PWR016" H 7125 1300 50  0001 C CNN
+F 1 "+3.3V" H 7140 1623 50  0000 C CNN
+F 2 "" H 7125 1450 50  0001 C CNN
+F 3 "" H 7125 1450 50  0001 C CNN
+	1    7125 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7125 1450 7125 1650
+Wire Wire Line
+	7125 1650 7400 1650
+Wire Wire Line
+	7400 1650 7400 1700
+Connection ~ 7125 1650
+Wire Wire Line
+	7125 1650 7125 2200
+Wire Wire Line
+	6725 2400 6425 2400
+Text Label 6425 2400 2    50   ~ 0
+SDA
+Text Label 6425 2500 2    50   ~ 0
+SCL
+Wire Wire Line
+	6725 2500 6425 2500
+Wire Wire Line
+	6725 2900 6575 2900
+Wire Wire Line
+	6575 2900 6575 3000
+Connection ~ 6575 3000
+$Comp
+L Device:C C7
+U 1 1 5EB58EE3
+P 9800 1800
+F 0 "C7" H 9915 1846 50  0000 L CNN
+F 1 "100nF" H 9915 1755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9838 1650 50  0001 C CNN
+F 3 "~" H 9800 1800 50  0001 C CNN
+F 4 "Kemet" H 9800 1800 50  0001 C CNN "Mfr."
+F 5 "C0805C104K5RAC7411" H 9800 1800 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 9800 1800 50  0001 C CNN "Distributor"
+F 7 "80-C0805C104K5RACLR" H 9800 1800 50  0001 C CNN "Order Number"
+	1    9800 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5EB58EE9
+P 9800 2000
+F 0 "#PWR021" H 9800 1750 50  0001 C CNN
+F 1 "GND" H 9805 1827 50  0000 C CNN
+F 2 "" H 9800 2000 50  0001 C CNN
+F 3 "" H 9800 2000 50  0001 C CNN
+	1    9800 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 2000 9800 1950
+$Comp
+L power:GND #PWR019
+U 1 1 5EB5A429
+P 9500 3400
+F 0 "#PWR019" H 9500 3150 50  0001 C CNN
+F 1 "GND" H 9505 3227 50  0000 C CNN
+F 2 "" H 9500 3400 50  0001 C CNN
+F 3 "" H 9500 3400 50  0001 C CNN
+	1    9500 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 3150 9500 3400
+$Comp
+L power:GND #PWR013
+U 1 1 5EB5B7F6
+P 9000 3400
+F 0 "#PWR013" H 9000 3150 50  0001 C CNN
+F 1 "GND" H 9005 3227 50  0000 C CNN
+F 2 "" H 9000 3400 50  0001 C CNN
+F 3 "" H 9000 3400 50  0001 C CNN
+	1    9000 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 2750 9000 2750
+Wire Wire Line
+	9000 2750 9000 2850
+Wire Wire Line
+	9100 2850 9000 2850
+Connection ~ 9000 2850
+Wire Wire Line
+	9000 2850 9000 2950
+Wire Wire Line
+	9100 2950 9000 2950
+Connection ~ 9000 2950
+Wire Wire Line
+	9000 2950 9000 3400
+Wire Wire Line
+	9100 2350 8800 2350
+Text Label 8800 2350 2    50   ~ 0
+SDA
+Text Label 8800 2450 2    50   ~ 0
+SCL
+Wire Wire Line
+	9100 2450 8800 2450
+Text Label 10250 2650 0    50   ~ 0
+~TempAlert
+Wire Wire Line
+	7525 2700 7750 2700
+Text Label 7875 2700 0    50   ~ 0
+LightAlert
+$Comp
+L Switch:SW_DIP_x01 SW1
+U 1 1 5EB83EF5
+P 9250 6500
+F 0 "SW1" H 9250 6767 50  0000 C CNN
+F 1 "ENABLE" H 9250 6676 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_Omron_A6S-110x_W8.9mm_P2.54mm" H 9250 6500 50  0001 C CNN
+F 3 "~" H 9250 6500 50  0001 C CNN
+F 4 "Omron" H 9250 6857 50  0001 C CNN "Mfr."
+F 5 "A6S-1104-PH " H 9250 6766 50  0001 C CNN "Mfr. No."
+F 6 "653-A6S1104PH" H 9250 6500 50  0001 C CNN "Order Number"
+	1    9250 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR030
+U 1 1 5EB85A40
+P 9600 6650
+F 0 "#PWR030" H 9600 6400 50  0001 C CNN
+F 1 "GND" H 9605 6477 50  0000 C CNN
+F 2 "" H 9600 6650 50  0001 C CNN
+F 3 "" H 9600 6650 50  0001 C CNN
+	1    9600 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 6500 8950 6500
+Wire Wire Line
+	9550 6500 9600 6500
+Wire Wire Line
+	9600 6500 9600 6650
+Wire Wire Line
+	8800 7600 8950 7600
+Text Label 8950 7600 0    50   ~ 0
+LightAlert
+Text Label 8950 7500 0    50   ~ 0
+~TempAlert
+Wire Wire Line
+	8800 7500 8950 7500
+NoConn ~ 7600 5800
+NoConn ~ 7600 6150
+NoConn ~ 7600 6600
+NoConn ~ 7600 6700
+NoConn ~ 7600 6800
+NoConn ~ 7600 6900
+NoConn ~ 7600 7200
+NoConn ~ 7600 7300
+NoConn ~ 7600 7400
+NoConn ~ 7600 7600
+NoConn ~ 7600 7700
+$Comp
+L Connector_Generic:Conn_01x03 X2
+U 1 1 5EB269BC
+P 1125 8575
+F 0 "X2" H 1205 8617 50  0000 L CNN
+F 1 "SOLAR" H 1205 8526 50  0000 L CNN
+F 2 "Connector_TE:2-2172067-2" H 1125 8575 50  0001 C CNN
+F 3 "~" H 1125 8575 50  0001 C CNN
+F 4 "TE Connectivity" H 1125 8575 50  0001 C CNN "Mfr."
+F 5 "2-2172067-2" H 1125 8575 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 1125 8575 50  0001 C CNN "Distributor"
+F 7 "571-2-2172067-2" H 1125 8575 50  0001 C CNN "Order Number"
+	1    1125 8575
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5EB2A2F6
+P 2250 6900
+F 0 "R12" V 2250 6850 50  0000 L CNN
+F 1 "3k3" V 2350 6850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2180 6900 50  0001 C CNN
+F 3 "~" H 2250 6900 50  0001 C CNN
+F 4 "TE Connectivity" H 2250 6900 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F3K3" H 2250 6900 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 2250 6900 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F3K3" H 2250 6900 50  0001 C CNN "Order Number"
+	1    2250 6900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 6600 2250 6750
+$Comp
+L power:+3.3V #PWR032
+U 1 1 5EB2A2FD
+P 2250 6600
+F 0 "#PWR032" H 2250 6450 50  0001 C CNN
+F 1 "+3.3V" H 2265 6773 50  0000 C CNN
+F 2 "" H 2250 6600 50  0001 C CNN
+F 3 "" H 2250 6600 50  0001 C CNN
+	1    2250 6600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 7050 2250 7100
+$Comp
+L power:+3.3V #PWR033
+U 1 1 5EB2C3BE
+P 1950 6600
+F 0 "#PWR033" H 1950 6450 50  0001 C CNN
+F 1 "+3.3V" H 1965 6773 50  0000 C CNN
+F 2 "" H 1950 6600 50  0001 C CNN
+F 3 "" H 1950 6600 50  0001 C CNN
+	1    1950 6600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 7000 1950 7000
+Wire Wire Line
+	1950 7000 1950 6600
+$Comp
+L power:GND #PWR036
+U 1 1 5EB30BAB
+P 1450 7600
+F 0 "#PWR036" H 1450 7350 50  0001 C CNN
+F 1 "GND" H 1455 7427 50  0000 C CNN
+F 2 "" H 1450 7600 50  0001 C CNN
+F 3 "" H 1450 7600 50  0001 C CNN
+	1    1450 7600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 7100 1350 7100
+Wire Wire Line
+	2250 7100 2400 7100
+Connection ~ 2250 7100
+Text Label 2400 7100 0    50   ~ 0
+WindSensor
+Text Label 5700 2750 0    50   ~ 0
+LiPo+
+Wire Wire Line
+	8950 5850 8800 5850
+Text Label 8950 5850 0    50   ~ 0
+LiPo+
+$Comp
+L power:VS #PWR034
+U 1 1 5EB56335
+P 1450 8325
+F 0 "#PWR034" H 1250 8175 50  0001 C CNN
+F 1 "VS" H 1467 8498 50  0000 C CNN
+F 2 "" H 1450 8325 50  0001 C CNN
+F 3 "" H 1450 8325 50  0001 C CNN
+	1    1450 8325
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 8325 1450 8375
+$Comp
+L power:VS #PWR06
+U 1 1 5EB5EE69
+P 2400 2000
+F 0 "#PWR06" H 2200 1850 50  0001 C CNN
+F 1 "VS" H 2400 2150 50  0000 C CNN
+F 2 "" H 2400 2000 50  0001 C CNN
+F 3 "" H 2400 2000 50  0001 C CNN
+	1    2400 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5EB62FF2
+P 2400 4350
+F 0 "#PWR07" H 2400 4100 50  0001 C CNN
+F 1 "GND" H 2405 4177 50  0000 C CNN
+F 2 "" H 2400 4350 50  0001 C CNN
+F 3 "" H 2400 4350 50  0001 C CNN
+	1    2400 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3800 2400 4200
+$Comp
+L Device:R_POT RV1
+U 1 1 5EB66EA8
+P 1850 2300
+F 0 "RV1" V 1850 2350 50  0000 R CNN
+F 1 "10k" V 1750 2350 50  0000 R CNN
+F 2 "Potentiometer_SMD_Kampi:Potentiometer_Vishay_TS53YJ_Vertical" H 1850 2300 50  0001 C CNN
+F 3 "~" H 1850 2300 50  0001 C CNN
+F 4 "Vishay" H 1780 2300 50  0001 R CNN "Mfr."
+F 5 "TS53YJ103MR10 " H 1780 2391 50  0001 R CNN "Mfr. No."
+F 6 "Mouser" H 1850 2300 50  0001 C CNN "Distributor"
+F 7 "72-TS53YJ-10K " H 1850 2300 50  0001 C CNN "Order Number"
+	1    1850 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1600 8725 1600 8775
+Wire Wire Line
+	1600 8425 1600 8375
+Wire Wire Line
+	1600 8375 1450 8375
+Connection ~ 1450 8375
+Wire Wire Line
+	1600 8775 1450 8775
+Connection ~ 1450 8775
+Wire Wire Line
+	1450 8775 1450 8825
+Wire Wire Line
+	1850 2500 1850 2450
+$Comp
+L power:GND #PWR03
+U 1 1 5EB97D13
+P 1850 2500
+F 0 "#PWR03" H 1850 2250 50  0001 C CNN
+F 1 "GND" H 1855 2327 50  0000 C CNN
+F 2 "" H 1850 2500 50  0001 C CNN
+F 3 "" H 1850 2500 50  0001 C CNN
+	1    1850 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2150 1850 2100
+Wire Wire Line
+	2400 2000 2400 2100
+Wire Wire Line
+	1900 3200 1650 3200
+Wire Wire Line
+	1650 3200 1650 2300
+Wire Wire Line
+	1650 2300 1700 2300
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5EBC4906
+P 1650 2050
+F 0 "TP1" H 1708 2168 50  0000 L CNN
+F 1 "SET" H 1708 2077 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 1850 2050 50  0001 C CNN
+F 3 "~" H 1850 2050 50  0001 C CNN
+	1    1650 2050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2050 1650 2300
+Connection ~ 1650 2300
+Wire Wire Line
+	1400 2950 1400 3400
+$Comp
+L Device:R R1
+U 1 1 5EBE7329
+P 1300 2800
+F 0 "R1" V 1300 2750 50  0000 L CNN
+F 1 "10k" V 1350 2550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1230 2800 50  0001 C CNN
+F 3 "~" H 1300 2800 50  0001 C CNN
+F 4 "TE Connectivity" H 1300 2800 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F10K" H 1300 2800 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 1300 2800 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F10K" H 1300 2800 50  0001 C CNN "Order Number"
+	1    1300 2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1850 4200 2400 4200
+Connection ~ 2400 4200
+Wire Wire Line
+	2400 4200 2400 4350
+Wire Wire Line
+	1900 3600 1850 3600
+$Comp
+L Device:R R4
+U 1 1 5EC126EC
+P 3400 3600
+F 0 "R4" V 3400 3550 50  0000 L CNN
+F 1 "220k" V 3500 3550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3330 3600 50  0001 C CNN
+F 3 "~" H 3400 3600 50  0001 C CNN
+F 4 "TE Connectivity" H 3400 3600 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F220K" H 3400 3600 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 3400 3600 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F220K" H 3400 3600 50  0001 C CNN "Order Number"
+	1    3400 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5EC1F12E
+P 3650 3400
+F 0 "R5" V 3650 3350 50  0000 L CNN
+F 1 "47k" V 3750 3350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3580 3400 50  0001 C CNN
+F 3 "~" H 3650 3400 50  0001 C CNN
+F 4 "TE Connectivity" H 3650 3400 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F47K" H 3650 3400 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 3650 3400 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F47K" H 3650 3400 50  0001 C CNN "Order Number"
+	1    3650 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 4200 3050 4200
+Wire Wire Line
+	3650 4200 3650 4100
+Wire Wire Line
+	2900 3600 3250 3600
+Wire Wire Line
+	3550 3600 3650 3600
+Wire Wire Line
+	3650 3600 3650 3800
+Wire Wire Line
+	3650 3600 3650 3550
+Connection ~ 3650 3600
+Wire Wire Line
+	3250 3400 3250 3200
+Wire Wire Line
+	3250 3200 3650 3200
+Wire Wire Line
+	3650 3200 3650 3250
+$Comp
+L Device:C C4
+U 1 1 5EC7415C
+P 4550 3550
+F 0 "C4" H 4665 3596 50  0000 L CNN
+F 1 "10uF" H 4665 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4588 3400 50  0001 C CNN
+F 3 "~" H 4550 3550 50  0001 C CNN
+F 4 "TDK" H 4550 3550 50  0001 C CNN "Mfr."
+F 5 "C2012X7S1E106K125AE" H 4550 3550 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 4550 3550 50  0001 C CNN "Distributor"
+F 7 "810-C2012X7S1E106125" H 4550 3550 50  0001 C CNN "Order Number"
+	1    4550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C5
+U 1 1 5EC7CFDB
+P 5000 3550
+F 0 "C5" H 5118 3596 50  0000 L CNN
+F 1 "100uF" H 5118 3505 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-1608-08_AVX-J_Pad1.25x1.05mm_HandSolder" H 5038 3400 50  0001 C CNN
+F 3 "~" H 5000 3550 50  0001 C CNN
+F 4 "AVX" H 5000 3550 50  0001 C CNN "Mfr."
+F 5 "F980J107MMAAXE" H 5000 3550 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 5000 3550 50  0001 C CNN "Distributor"
+F 7 "581-F980J107MMAAXE" H 5000 3550 50  0001 C CNN "Order Number"
+	1    5000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D2
+U 1 1 5ECE3EB4
+P 4200 2550
+F 0 "D2" H 4200 2766 50  0000 C CNN
+F 1 "ZLLS500" H 4200 2675 50  0000 C CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 4200 2550 50  0001 C CNN
+F 3 "~" H 4200 2550 50  0001 C CNN
+F 4 "Diodes Incorporated" H 4200 2550 50  0001 C CNN "Mfr."
+F 5 "ZLLS500TA" H 4200 2550 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 4200 2550 50  0001 C CNN "Distributor"
+F 7 "522-ZLLS500TA" H 4200 2550 50  0001 C CNN "Order Number"
+	1    4200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5ECEC91E
+P 3300 2950
+F 0 "C3" H 3415 2996 50  0000 L CNN
+F 1 "1uF" H 3415 2905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3338 2800 50  0001 C CNN
+F 3 "~" H 3300 2950 50  0001 C CNN
+F 4 "Kemet" H 3300 2950 50  0001 C CNN "Mfr."
+F 5 "C0805X105K3RAC3316" H 3300 2950 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 3300 2950 50  0001 C CNN "Distributor"
+F 7 "80-C0805X105K3R3316" H 3300 2950 50  0001 C CNN "Order Number"
+	1    3300 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5ECFD6B7
+P 3700 2650
+F 0 "L1" V 3775 2650 50  0000 C CNN
+F 1 "68uH" V 3850 2650 50  0000 C CNN
+F 2 "Inductor_SMD:L_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3700 2650 50  0001 C CNN
+F 3 "~" H 3700 2650 50  0001 C CNN
+F 4 "Vishay / Dale" V 3981 2650 50  0001 C CNN "Mfr."
+F 5 "IDC2512ER680M" V 3890 2650 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 3700 2650 50  0001 C CNN "Distributor"
+F 7 "70-IDC2512ER680M" H 3700 2650 50  0001 C CNN "Order Number"
+	1    3700 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2900 3000 2950 3000
+Wire Wire Line
+	3500 2650 3500 2950
+Wire Wire Line
+	3500 2650 3550 2650
+Connection ~ 3500 2650
+Wire Wire Line
+	2900 3300 3150 3300
+Wire Wire Line
+	3150 3300 3150 3100
+Wire Wire Line
+	3150 3100 3900 3100
+$Comp
+L Device:R R7
+U 1 1 5ED2D800
+P 4200 2750
+F 0 "R7" V 4200 2700 50  0000 L CNN
+F 1 "0R22" V 4300 2700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4130 2750 50  0001 C CNN
+F 3 "~" H 4200 2750 50  0001 C CNN
+F 4 "Panasonic" H 4200 2750 50  0001 C CNN "Mfr."
+F 5 "ERJ-U6QJR22V" H 4200 2750 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 4200 2750 50  0001 C CNN "Distributor"
+F 7 "667-ERJ-U6QJR22V" H 4200 2750 50  0001 C CNN "Order Number"
+	1    4200 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 2750 4050 2750
+$Comp
+L Device:D_Schottky D1
+U 1 1 5EDC83CB
+P 3800 3700
+F 0 "D1" H 3800 3916 50  0000 C CNN
+F 1 "ZLLS500" H 3800 3825 50  0000 C CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 3800 3700 50  0001 C CNN
+F 3 "~" H 3800 3700 50  0001 C CNN
+F 4 "Diodes Incorporated" H 3800 3700 50  0001 C CNN "Mfr."
+F 5 "ZLLS500TA" H 3800 3700 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 3800 3700 50  0001 C CNN "Distributor"
+F 7 "522-ZLLS500TA" H 3800 3700 50  0001 C CNN "Order Number"
+	1    3800 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5EDD4380
+P 1600 8575
+F 0 "C9" H 1715 8621 50  0000 L CNN
+F 1 "10uF" H 1715 8530 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1638 8425 50  0001 C CNN
+F 3 "~" H 1600 8575 50  0001 C CNN
+F 4 "TDK" H 1600 8575 50  0001 C CNN "Mfr."
+F 5 "C2012X7S1E106K125AE" H 1600 8575 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 1600 8575 50  0001 C CNN "Distributor"
+F 7 "810-C2012X7S1E106125" H 1600 8575 50  0001 C CNN "Order Number"
+	1    1600 8575
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5EE2578A
+P 3650 3950
+F 0 "R6" V 3650 3900 50  0000 L CNN
+F 1 "220k" V 3750 3900 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3580 3950 50  0001 C CNN
+F 3 "~" H 3650 3950 50  0001 C CNN
+F 4 "TE Connectivity" H 3650 3950 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F220K" H 3650 3950 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 3650 3950 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F220K" H 3650 3950 50  0001 C CNN "Order Number"
+	1    3650 3950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 3500 1300 3500
+Wire Wire Line
+	1300 2950 1300 3500
+Wire Wire Line
+	1900 3400 1400 3400
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5EB5EB9C
+P 1350 2450
+F 0 "#PWR01" H 1350 2300 50  0001 C CNN
+F 1 "+3.3V" H 1365 2623 50  0000 C CNN
+F 2 "" H 1350 2450 50  0001 C CNN
+F 3 "" H 1350 2450 50  0001 C CNN
+	1    1350 2450
+	1    0    0    -1  
+$EndComp
+Text Label 1150 3400 2    50   ~ 0
+~CHRG
+Wire Wire Line
+	1400 3400 1150 3400
+Text Label 1150 3500 2    50   ~ 0
+~FAULT
+Wire Wire Line
+	1300 3500 1150 3500
+Connection ~ 1300 3500
+Connection ~ 1400 3400
+Wire Wire Line
+	1850 2100 2400 2100
+$Comp
+L power:GND #PWR09
+U 1 1 5EC28417
+P 3800 4350
+F 0 "#PWR09" H 3800 4100 50  0001 C CNN
+F 1 "GND" H 3805 4177 50  0000 C CNN
+F 2 "" H 3800 4350 50  0001 C CNN
+F 3 "" H 3800 4350 50  0001 C CNN
+	1    3800 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5EC33F46
+P 5000 4350
+F 0 "#PWR011" H 5000 4100 50  0001 C CNN
+F 1 "GND" H 5005 4177 50  0000 C CNN
+F 2 "" H 5000 4350 50  0001 C CNN
+F 3 "" H 5000 4350 50  0001 C CNN
+	1    5000 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3850 3800 4350
+Wire Wire Line
+	3500 2650 2950 2650
+Wire Wire Line
+	2950 2650 2950 3000
+Connection ~ 3650 3200
+Wire Wire Line
+	4350 2750 4550 2750
+Wire Wire Line
+	3650 3200 4550 3200
+Connection ~ 4550 2750
+Wire Wire Line
+	3450 2950 3500 2950
+Connection ~ 3500 2950
+Wire Wire Line
+	3150 2950 3050 2950
+Wire Wire Line
+	3500 2950 3800 2950
+Wire Wire Line
+	3800 2950 3800 3550
+Wire Wire Line
+	3900 2650 3850 2650
+Wire Wire Line
+	3900 2650 3900 2750
+Wire Wire Line
+	3050 2550 3050 2950
+Wire Wire Line
+	3050 2550 4050 2550
+Connection ~ 3050 2950
+Wire Wire Line
+	3050 2950 3050 3200
+Wire Wire Line
+	2900 3200 3050 3200
+Wire Wire Line
+	5000 3700 5000 4350
+$Comp
+L power:GND #PWR010
+U 1 1 5EDE69D0
+P 4550 4350
+F 0 "#PWR010" H 4550 4100 50  0001 C CNN
+F 1 "GND" H 4555 4177 50  0000 C CNN
+F 2 "" H 4550 4350 50  0001 C CNN
+F 3 "" H 4550 4350 50  0001 C CNN
+	1    4550 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3700 4550 4350
+Text Label 8950 7400 0    50   ~ 0
+~CHRG
+Text Label 8950 7300 0    50   ~ 0
+~FAULT
+Wire Wire Line
+	8800 7300 8950 7300
+Wire Wire Line
+	8800 7400 8950 7400
+Wire Wire Line
+	2900 3400 3250 3400
+Wire Wire Line
+	2400 2100 2400 2800
+Connection ~ 2400 2100
+$Comp
+L Device:R R2
+U 1 1 5EE3D70B
+P 1400 2800
+F 0 "R2" V 1400 2750 50  0000 L CNN
+F 1 "10k" V 1350 2900 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1330 2800 50  0001 C CNN
+F 3 "~" H 1400 2800 50  0001 C CNN
+F 4 "TE Connectivity" H 1400 2800 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F10K" H 1400 2800 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 1400 2800 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F10K" H 1400 2800 50  0001 C CNN "Order Number"
+	1    1400 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 2500 1350 2500
+Wire Wire Line
+	1300 2500 1300 2650
+Wire Wire Line
+	1400 2500 1400 2650
+$Comp
+L power:VS #PWR02
+U 1 1 5EF224DA
+P 1850 2950
+F 0 "#PWR02" H 1650 2800 50  0001 C CNN
+F 1 "VS" H 1850 3100 50  0000 C CNN
+F 2 "" H 1850 2950 50  0001 C CNN
+F 3 "" H 1850 2950 50  0001 C CNN
+	1    1850 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2950 1850 3000
+$Comp
+L Device:R R3
+U 1 1 5EFCA17A
+P 3050 3950
+F 0 "R3" H 3120 3996 50  0000 L CNN
+F 1 "NTC" H 3120 3905 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 2980 3950 50  0001 C CNN
+F 3 "~" H 3050 3950 50  0001 C CNN
+F 4 "Murata Electronics" H 3120 3950 50  0001 L CNN "Mfr."
+F 5 "NXRT15XH103FA5B040" H 3120 3859 50  0001 L CNN "Mfr. No."
+F 6 "Mouser" H 3050 3950 50  0001 C CNN "Distributor"
+F 7 "81-NXRT15XH103FA5B040" H 3050 3950 50  0001 C CNN "Order Number"
+	1    3050 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3500 3050 3500
+Wire Wire Line
+	3050 3500 3050 3800
+Wire Wire Line
+	3050 4100 3050 4200
+Connection ~ 3050 4200
+Wire Wire Line
+	3050 4200 3650 4200
+$Comp
+L Battery_Management:LT3652EMSE IC2
+U 1 1 5F070109
+P 2400 3300
+F 0 "IC2" H 2050 3750 50  0000 C CNN
+F 1 "LT3652EMSE" H 2250 2850 50  0000 C CNN
+F 2 "Package_SO:MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm" H 2400 2700 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3652fe.pdf" H 3000 2500 50  0001 C CNN
+F 4 "Analog Devices" H 2400 3889 50  0001 C CNN "Mfr."
+F 5 "LT3652EMSE#PBF" H 2400 3300 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 2400 3300 50  0001 C CNN "Distributor"
+F 7 "584-LT3652EMSE#PBF" H 2400 3300 50  0001 C CNN "Order Number"
+	1    2400 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2750 4550 2550
+Wire Wire Line
+	4550 2550 4350 2550
+Connection ~ 4550 3200
+Wire Wire Line
+	4550 3200 4550 3400
+Wire Wire Line
+	4550 2750 5000 2750
+Wire Wire Line
+	5000 2750 5000 3400
+Connection ~ 5000 2750
+Wire Wire Line
+	5000 2750 5700 2750
+Wire Wire Line
+	1350 2450 1350 2500
+Connection ~ 1350 2500
+Wire Wire Line
+	1350 2500 1400 2500
+Connection ~ 3900 2750
+Wire Wire Line
+	4550 2750 4550 3200
+Wire Wire Line
+	3900 2750 3900 3100
+Text Label 8950 7200 0    50   ~ 0
+WindSensor
+Wire Wire Line
+	8950 7200 8800 7200
+$Comp
+L Device:R R9
+U 1 1 5EC304C7
+P 6900 6600
+F 0 "R9" V 6900 6550 50  0000 L CNN
+F 1 "22k" V 6800 6550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 6600 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf" H 6900 6600 50  0001 C CNN
+F 4 "Vishay / Dale" H 6900 6600 50  0001 C CNN "Mfr."
+F 5 "TNPW080522K0BEEA" H 6900 6600 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 6900 6600 50  0001 C CNN "Distributor"
+F 7 "71-TNPW080522K0BEEA" H 6900 6600 50  0001 C CNN "Order Number"
+	1    6900 6600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5EC304D1
+P 6900 6200
+F 0 "R8" V 6900 6150 50  0000 L CNN
+F 1 "100k" V 7000 6150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 6200 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf" H 6900 6200 50  0001 C CNN
+F 4 "Vishay / Draloric" H 6900 6200 50  0001 C CNN "Mfr."
+F 5 "TNPW0805100KBYEA" H 6900 6200 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 6900 6200 50  0001 C CNN "Distributor"
+F 7 "71-TNPW0805100KBYEA" H 6900 6200 50  0001 C CNN "Order Number"
+	1    6900 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VS #PWR025
+U 1 1 5EC69E93
+P 6900 5550
+F 0 "#PWR025" H 6700 5400 50  0001 C CNN
+F 1 "VS" H 6900 5700 50  0000 C CNN
+F 2 "" H 6900 5550 50  0001 C CNN
+F 3 "" H 6900 5550 50  0001 C CNN
+	1    6900 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR026
+U 1 1 5EC75AAF
+P 6900 6850
+F 0 "#PWR026" H 6900 6600 50  0001 C CNN
+F 1 "GND" H 6905 6677 50  0000 C CNN
+F 2 "" H 6900 6850 50  0001 C CNN
+F 3 "" H 6900 6850 50  0001 C CNN
+	1    6900 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 5550 6900 6050
+Wire Wire Line
+	6900 6750 6900 6850
+Wire Wire Line
+	6900 6350 6900 6400
+Wire Wire Line
+	7600 6400 6900 6400
+Connection ~ 6900 6400
+Wire Wire Line
+	6900 6400 6900 6450
+Text Notes 750  900  0    50   ~ 0
+- Connect NTC with battery pack (optional).\n
+Text Notes 750  750  0    50   ~ 0
+- Set the voltage at the SET testpoint to 2.8 V in maximum sun.
+Text Notes 750  1050 0    50   ~ 0
+- Adjust R8 to increase or decrease the maximum charge current.
+Text Notes 775  10100 0    100  ~ 20
+Device
+Text Notes 1725 10100 0    100  ~ 20
+Address\n
+Text Notes 750  10350 0    100  ~ 0
+BH1726
+Text Notes 750  10550 0    100  ~ 0
+BME680
+Text Notes 750  10750 0    100  ~ 0
+MCP9808
+Wire Notes Line
+	675  10150 2575 10150
+Wire Notes Line
+	1575 9900 1575 11000
+Text Notes 1725 10350 0    100  ~ 0
+0x29
+Text Notes 1725 10550 0    100  ~ 0
+0x76
+Text Notes 1725 10750 0    100  ~ 0
+0x18
+Wire Notes Line
+	575  9850 2675 9850
+Wire Notes Line
+	2675 9850 2675 11050
+Wire Notes Line
+	2675 11050 575  11050
+Wire Notes Line
+	575  11050 575  9850
+$Comp
+L DevBoards:ParticleArgon M1
+U 1 1 5EB250D2
+P 8200 6800
+F 0 "M1" H 7750 7950 50  0000 C CNN
+F 1 "ParticleArgon" H 7950 5550 50  0000 C CNN
+F 2 "Modules:ParticleArgon" H 8200 6600 50  0001 C CNN
+F 3 "https://docs.particle.io/datasheets/wi-fi/argon-datasheet/" H 8200 6600 50  0001 C CNN
+F 4 "Particle" H 8200 6800 50  0001 C CNN "Mfr."
+F 5 "ARGNKIT " H 8200 6800 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 8200 6800 50  0001 C CNN "Distributor"
+F 7 "465-ARGNKIT" H 8200 6800 50  0001 C CNN "Order Number"
+	1    8200 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 X1
+U 1 1 5EBDB2AF
+P 1150 7100
+F 0 "X1" H 1230 7142 50  0000 L CNN
+F 1 "WIND" H 1230 7051 50  0000 L CNN
+F 2 "Connector_TE:3-2172067-2" H 1150 7100 50  0001 C CNN
+F 3 "~" H 1150 7100 50  0001 C CNN
+F 4 "TE Connectivity" H 1150 7100 50  0001 C CNN "Mfr."
+F 5 "3-2172067-2" H 1150 7100 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 1150 7100 50  0001 C CNN "Distributor"
+F 7 "571-3-2172067-2" H 1150 7100 50  0001 C CNN "Order Number"
+	1    1150 7100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1325 8675 1450 8675
+Wire Wire Line
+	1450 8675 1450 8775
+Wire Wire Line
+	1325 8475 1450 8475
+Wire Wire Line
+	1450 8375 1450 8475
+NoConn ~ 1325 8575
+Wire Wire Line
+	1350 7300 1450 7300
+Wire Wire Line
+	1450 7300 1450 7600
+Wire Wire Line
+	1350 7200 2400 7200
+Text Label 2400 7200 0    50   ~ 0
+WindDirection
+Text Label 7550 6500 2    50   ~ 0
+WindDirection
+Wire Wire Line
+	7550 6500 7600 6500
+Wire Wire Line
+	9900 2650 10100 2650
+Text Notes 750  1200 0    50   ~ 0
+- The device is powered by an external solar panel with a minimum output power of 2 W and a voltage from 6 V to 20 V.
+Text Notes 750  1350 0    50   ~ 0
+- Interface for a Davis Anemometer for wind speed and wind direction measurement.
+NoConn ~ 8800 7000
+Wire Wire Line
+	11450 2000 11450 1900
+Wire Wire Line
+	11550 1450 11550 1550
+Wire Wire Line
+	11900 1550 11900 1600
+Wire Wire Line
+	11900 1900 11900 1950
+$Comp
+L Device:C C2
+U 1 1 5EDA79A8
+P 14100 1850
+F 0 "C2" H 14215 1896 50  0000 L CNN
+F 1 "100nF" H 14215 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 14138 1700 50  0001 C CNN
+F 3 "~" H 14100 1850 50  0001 C CNN
+F 4 "Kemet" H 14100 1850 50  0001 C CNN "Mfr."
+F 5 "C0805C104K5RAC7411" H 14100 1850 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 14100 1850 50  0001 C CNN "Distributor"
+F 7 "80-C0805C104K5RACLR" H 14100 1850 50  0001 C CNN "Order Number"
+	1    14100 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5EDA79B0
+P 14100 2050
+F 0 "#PWR0101" H 14100 1800 50  0001 C CNN
+F 1 "GND" H 14105 1877 50  0000 C CNN
+F 2 "" H 14100 2050 50  0001 C CNN
+F 3 "" H 14100 2050 50  0001 C CNN
+	1    14100 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5EDA79B9
+P 13750 1450
+F 0 "#PWR0102" H 13750 1300 50  0001 C CNN
+F 1 "+3.3V" H 13765 1623 50  0000 C CNN
+F 2 "" H 13750 1450 50  0001 C CNN
+F 3 "" H 13750 1450 50  0001 C CNN
+	1    13750 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13750 1675 14100 1675
+Connection ~ 13750 1675
+Wire Wire Line
+	13750 1450 13750 1675
+Wire Wire Line
+	14100 1675 14100 1700
+$Comp
+L SensorHub-rescue:VEML6070-Vishay IC1
+U 1 1 5ED48DF7
+P 13750 2650
+F 0 "IC1" H 13500 3050 50  0000 L CNN
+F 1 "VEML6070" H 13550 2300 50  0000 L CNN
+F 2 "Package_LGA_Kampi:OPLGA-6" H 13750 3300 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/84277/veml6070.pdf" H 13750 2550 50  0001 C CNN
+F 4 "Vishay Semiconductors" H 13750 2650 50  0001 C CNN "Mfr."
+F 5 "VEML6070" H 13750 2650 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 13750 2650 50  0001 C CNN "Distributor"
+F 7 "78-VEML6070" H 13750 2650 50  0001 C CNN "Order Number"
+	1    13750 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13750 1675 13750 2200
+Wire Wire Line
+	14100 2000 14100 2050
+$Comp
+L power:GND #PWR0103
+U 1 1 5EE0E7F1
+P 13750 3400
+F 0 "#PWR0103" H 13750 3150 50  0001 C CNN
+F 1 "GND" H 13755 3227 50  0000 C CNN
+F 2 "" H 13750 3400 50  0001 C CNN
+F 3 "" H 13750 3400 50  0001 C CNN
+	1    13750 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13750 3050 13750 3400
+Wire Wire Line
+	13400 2550 13150 2550
+Text Label 13150 2550 2    50   ~ 0
+SDA
+Text Label 13150 2450 2    50   ~ 0
+SCL
+Wire Wire Line
+	13400 2450 13150 2450
+Wire Wire Line
+	9500 1600 9800 1600
+Wire Wire Line
+	9800 1600 9800 1650
+Connection ~ 9500 1600
+Wire Wire Line
+	9500 1600 9500 2150
+Text Label 14600 2650 0    50   ~ 0
+VEML_ACK
+Wire Wire Line
+	14150 2650 14500 2650
+Text Label 8950 7100 0    50   ~ 0
+VEML_ACK
+Wire Wire Line
+	8950 7100 8800 7100
+$Comp
+L Device:R R15
+U 1 1 5EDC7341
+P 10100 2450
+F 0 "R15" V 10100 2400 50  0000 L CNN
+F 1 "3k3" V 10200 2400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10030 2450 50  0001 C CNN
+F 3 "~" H 10100 2450 50  0001 C CNN
+F 4 "TE Connectivity" H 10100 2450 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F3K3" H 10100 2450 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 10100 2450 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F3K3" H 10100 2450 50  0001 C CNN "Order Number"
+	1    10100 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 5EDD0DA1
+P 7750 2500
+F 0 "R14" V 7750 2450 50  0000 L CNN
+F 1 "3k3" V 7850 2450 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7680 2500 50  0001 C CNN
+F 3 "~" H 7750 2500 50  0001 C CNN
+F 4 "TE Connectivity" H 7750 2500 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F3K3" H 7750 2500 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 7750 2500 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F3K3" H 7750 2500 50  0001 C CNN "Order Number"
+	1    7750 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5EDDA786
+P 14500 2450
+F 0 "R13" V 14500 2400 50  0000 L CNN
+F 1 "3k3" V 14600 2400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14430 2450 50  0001 C CNN
+F 3 "~" H 14500 2450 50  0001 C CNN
+F 4 "TE Connectivity" H 14500 2450 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F3K3" H 14500 2450 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 14500 2450 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F3K3" H 14500 2450 50  0001 C CNN "Order Number"
+	1    14500 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR04
+U 1 1 5EDE437E
+P 14500 2250
+F 0 "#PWR04" H 14500 2100 50  0001 C CNN
+F 1 "+3.3V" H 14515 2423 50  0000 C CNN
+F 2 "" H 14500 2250 50  0001 C CNN
+F 3 "" H 14500 2250 50  0001 C CNN
+	1    14500 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14500 2250 14500 2300
+Wire Wire Line
+	14500 2600 14500 2650
+Connection ~ 14500 2650
+Wire Wire Line
+	14500 2650 14600 2650
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5EE0BB18
+P 7750 2300
+F 0 "#PWR05" H 7750 2150 50  0001 C CNN
+F 1 "+3.3V" H 7765 2473 50  0000 C CNN
+F 2 "" H 7750 2300 50  0001 C CNN
+F 3 "" H 7750 2300 50  0001 C CNN
+	1    7750 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2300 7750 2350
+Wire Wire Line
+	7750 2650 7750 2700
+Connection ~ 7750 2700
+Wire Wire Line
+	7750 2700 7875 2700
+Wire Wire Line
+	10100 2600 10100 2650
+Connection ~ 10100 2650
+Wire Wire Line
+	10100 2650 10250 2650
+$Comp
+L power:+3.3V #PWR08
+U 1 1 5EE34923
+P 10100 2250
+F 0 "#PWR08" H 10100 2100 50  0001 C CNN
+F 1 "+3.3V" H 10115 2423 50  0000 C CNN
+F 2 "" H 10100 2250 50  0001 C CNN
+F 3 "" H 10100 2250 50  0001 C CNN
+	1    10100 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2250 10100 2300
+$Comp
+L Device:R R16
+U 1 1 5EE4A862
+P 13250 2900
+F 0 "R16" V 13250 2850 50  0000 L CNN
+F 1 "270k" V 13350 2850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 13180 2900 50  0001 C CNN
+F 3 "~" H 13250 2900 50  0001 C CNN
+F 4 "TE Connectivity" H 13250 2900 50  0001 C CNN "Mfr."
+F 5 "CRGP0805F270K" H 13250 2900 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 13250 2900 50  0001 C CNN "Distributor"
+F 7 "279-CRGP0805F270K" H 13250 2900 50  0001 C CNN "Order Number"
+	1    13250 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR037
+U 1 1 5EE55190
+P 13250 3400
+F 0 "#PWR037" H 13250 3150 50  0001 C CNN
+F 1 "GND" H 13255 3227 50  0000 C CNN
+F 2 "" H 13250 3400 50  0001 C CNN
+F 3 "" H 13250 3400 50  0001 C CNN
+	1    13250 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13250 3400 13250 3050
+Wire Wire Line
+	13400 2700 13250 2700
+Wire Wire Line
+	13250 2700 13250 2750
+Wire Wire Line
+	9500 1450 9500 1600
+$Comp
+L power:+3.3V #PWR018
+U 1 1 5EB58EF0
+P 9500 1450
+F 0 "#PWR018" H 9500 1300 50  0001 C CNN
+F 1 "+3.3V" H 9515 1623 50  0000 C CNN
+F 2 "" H 9500 1450 50  0001 C CNN
+F 3 "" H 9500 1450 50  0001 C CNN
+	1    9500 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3000 1850 3000
+Text Notes 750  10950 0    100  ~ 0
+VEML6070
+Text Notes 1725 10950 0    100  ~ 0
+0x38
+Text Notes 5450 6300 0    50   ~ 0
+The voltage divider is designed\nfor a 17.8 V solar panel.
+Wire Wire Line
+	1850 3600 1850 4200
+$EndSCHEMATC

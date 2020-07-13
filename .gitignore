@@ -1,0 +1,15 @@
+*.jou
+*.log
+*.runs/
+*.cache/
+*.ip_user_files/
+*.hw/
+*.tmp/
+*.sim/
+*.str
+*.metadata/
+*.dmp/
+
+build/
+target/
+*.pro.*

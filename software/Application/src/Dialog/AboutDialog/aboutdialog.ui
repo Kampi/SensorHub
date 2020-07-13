@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AboutDialog</class>
+ <widget class="QDialog" name="AboutDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>About</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../Ressources.qrc">
+    <normaloff>:/Icons/Ressources/Icons/icons8-3d-touch-96.png</normaloff>:/Icons/Ressources/Icons/icons8-3d-touch-96.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color: #FFFFFF;
+}
+
+QGroupBox {
+	font-weight: bold;
+	color: #0489B1;
+	background: #FFFFFF;
+	border: 1px solid #0489B1;
+	border-radius: 5px;
+	margin-top: 2ex;
+}
+
+QGroupBox::title {
+	top: -7px;
+	left: 5px;
+	padding: 0 3px;
+}
+
+QTextBrowser {
+	border: 0px;
+}</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox_Close">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>360</y>
+     <width>380</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Close</set>
+   </property>
+   <property name="centerButtons">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>380</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Author</string>
+   </property>
+   <widget class="QTextBrowser" name="textBrowser_AboutAuthor">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>360</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="openExternalLinks">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>380</width>
+     <height>220</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>License</string>
+   </property>
+   <widget class="QTextBrowser" name="textBrowser_License">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>360</width>
+      <height>180</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox_Close</sender>
+   <signal>accepted()</signal>
+   <receiver>AboutDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox_Close</sender>
+   <signal>rejected()</signal>
+   <receiver>AboutDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

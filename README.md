@@ -33,6 +33,8 @@ The integrated WiFi is used to transmit the data as an [MQTT](http://mqtt.org/) 
 
 ![Application](docs/img/Application.png)
 
+Please visit the [project site](https://www.kampis-elektroecke.de/wetterdaten-aufzeichnen/) or write me an [e-mail](mailto:DanielKampert@kampis-elektroecke.de) when you need additional informations or if you have any questions.
+
 ## Image sources
 
 - [Language Icons](https://www.iconfinder.com/iconsets/flags_gosquared)

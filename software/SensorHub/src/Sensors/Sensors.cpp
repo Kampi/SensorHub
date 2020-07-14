@@ -24,6 +24,7 @@
 
 #include "Sensors.h"
 
+#define SOLAR_VOLTAGE               A0
 #define TEMPERATURE_ALERT           D3 
 #define LIGHT_ALERT                 D2
 #define TEMP_BASELINE               21.0f
@@ -94,8 +95,9 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
 {
     uint16_t UV;
     uint16_t AmbientLight;
-
     BME680_Heater HeaterProfile(0, 320, 200, 0);
+
+    Data->IAQ.Value = 0.0;
 
     if(!Sensors::_mInitialized)
     {
@@ -144,9 +146,9 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
 
         // Calculate the IAQ index
         // (based on https://forum.iot-usergroup.de/t/indoor-air-quality-index/416/2)
-        double TempCoef;
-        double HumCoef;
-        double GasCoef;
+        double TempCoef = 0.0;
+        double HumCoef = 0.0;
+        double GasCoef = 0.0;
         double TempOffset = Data->Temperature - TEMP_BASELINE;
         double HumOffset = Data->Environment.Humidity - HUM_BASELINE;
         double GasOffset = Sensors::_mGasBaseLine - Data->Environment.GasResistance;
@@ -204,6 +206,9 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
 
     // Convert the ambient light measurment result
     Data->AmbientLight = ((float)AmbientLight) / 4.0;
+
+    // Get the solar voltage
+    Data->Voltage = analogRead(A0) * 0.0008 * (122000 / 22000);
 
     Sensors::_mLastError = NO_ERROR;
     return NO_ERROR;

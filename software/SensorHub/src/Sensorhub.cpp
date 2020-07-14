@@ -36,7 +36,7 @@ void setup();
 void loop();
 #line 29 "g:/Dropbox/Git/SensorHub/software/SensorHub/src/Sensorhub.ino"
 #define FIRMWARE_MAJOR                  1
-#define FIRMWARE_MINOR                  0
+#define FIRMWARE_MINOR                  1
 #define FIRMWARE_REVISION               0
 
 #define TIMEOUT                         60000
@@ -114,6 +114,7 @@ void loop()
                 Writer.name("Gas valid").value(Data.Environment.GasValid);
                 Writer.name("IAQ").value(Data.IAQ.Value);
                 Writer.name("IAQ valid").value(Data.IAQ.Valid);
+                Writer.name("Voltage").value(Data.Voltage);
             Writer.endObject();
 
             Network::Publish("sensorhub/weather", Buffer, sizeof(Buffer));

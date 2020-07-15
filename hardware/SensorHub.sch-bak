@@ -792,7 +792,7 @@ P 4200 2550
 F 0 "D2" H 4200 2766 50  0000 C CNN
 F 1 "ZLLS500" H 4200 2675 50  0000 C CNN
 F 2 "Diode_SMD:D_SOT-23_ANK" H 4200 2550 50  0001 C CNN
-F 3 "~" H 4200 2550 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ZLLS500.pdf" H 4200 2550 50  0001 C CNN
 F 4 "Diodes Incorporated" H 4200 2550 50  0001 C CNN "Mfr."
 F 5 "ZLLS500TA" H 4200 2550 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 4200 2550 50  0001 C CNN "Distributor"
@@ -820,7 +820,7 @@ L Device:L L1
 U 1 1 5ECFD6B7
 P 3700 2650
 F 0 "L1" V 3775 2650 50  0000 C CNN
-F 1 "33uH" V 3850 2650 50  0000 C CNN
+F 1 "22uH" V 3850 2650 50  0000 C CNN
 F 2 "Inductor_SMD:L_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3700 2650 50  0001 C CNN
 F 3 "https://www.mouser.de/datasheet/2/427/idc2512-1762893.pdf" H 3700 2650 50  0001 C CNN
 F 4 "Vishay / Dale" V 3981 2650 50  0001 C CNN "Mfr."
@@ -867,7 +867,7 @@ P 3800 3700
 F 0 "D1" H 3800 3916 50  0000 C CNN
 F 1 "ZLLS500" H 3800 3825 50  0000 C CNN
 F 2 "Diode_SMD:D_SOT-23_ANK" H 3800 3700 50  0001 C CNN
-F 3 "~" H 3800 3700 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ZLLS500.pdf" H 3800 3700 50  0001 C CNN
 F 4 "Diodes Incorporated" H 3800 3700 50  0001 C CNN "Mfr."
 F 5 "ZLLS500TA" H 3800 3700 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 3800 3700 50  0001 C CNN "Distributor"

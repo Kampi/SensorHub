@@ -56,7 +56,8 @@ class Sensors
                 bool Valid;
             } IAQ;
             uint8_t UV;
-            float Voltage;
+            float SolarVoltage;
+            float BatteryVoltage;
         } SensorData;
 
         static Sensors::Error lastError(void);

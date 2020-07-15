@@ -207,8 +207,9 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
     // Convert the ambient light measurment result
     Data->AmbientLight = ((float)AmbientLight) / 4.0;
 
-    // Get the solar voltage
-    Data->Voltage = analogRead(A0) * 0.0008 * (122000 / 22000);
+    // Get the system voltages
+    Data->SolarVoltage = analogRead(A0) * 0.0008 * (122000 / 22000);
+    Data->BatteryVoltage = analogRead(BATT) * 0.0011224;
 
     Sensors::_mLastError = NO_ERROR;
     return NO_ERROR;

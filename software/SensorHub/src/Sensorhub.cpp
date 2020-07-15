@@ -41,7 +41,7 @@ void loop();
 
 #define TIMEOUT                         60000
 
-char Buffer[200];
+char Buffer[255];
 
 SystemSleepConfiguration SleepConfig;
 
@@ -51,6 +51,10 @@ SYSTEM_THREAD(ENABLED);
 void setup()
 {
     delay(3000);
+
+    // Disable LED D7
+    pinMode(D7, OUTPUT);
+    digitalWrite(D7, LOW);
 
     Serial.begin(9600);
 
@@ -114,7 +118,8 @@ void loop()
                 Writer.name("Gas valid").value(Data.Environment.GasValid);
                 Writer.name("IAQ").value(Data.IAQ.Value);
                 Writer.name("IAQ valid").value(Data.IAQ.Valid);
-                Writer.name("Voltage").value(Data.Voltage);
+                Writer.name("Solar").value(Data.SolarVoltage);
+                Writer.name("Battery").value(Data.BatteryVoltage);
             Writer.endObject();
 
             Network::Publish("sensorhub/weather", Buffer, sizeof(Buffer));

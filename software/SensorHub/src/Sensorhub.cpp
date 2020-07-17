@@ -41,7 +41,7 @@ void loop();
 
 #define TIMEOUT                         60000
 
-char Buffer[255];
+char Buffer[200];
 
 SystemSleepConfiguration SleepConfig;
 

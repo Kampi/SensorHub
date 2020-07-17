@@ -118,7 +118,9 @@ The JSON object uses the following structure:
   "Gas resistance": "20000",
   "Gas valid": "0",
   "IAQ": "97.5",
-  "IAQ valid": "0"
+  "IAQ valid": "0",
+  "Solar": "1.2",
+  "Battery": "3.3"
 }
 ```
 
@@ -133,6 +135,8 @@ The JSON object uses the following structure:
 | Gas valid      | Boolean flag to indicate a valid gas measurement. |
 | IAQ            | [Indor Air Quality](https://en.wikipedia.org/wiki/Indoor_air_quality) in %. |
 | IAQ valid      | Boolean flag to indicate a valid IAQ index. |
+| Solar          | Solar cell voltage as float in V. |
+| Battery        | Battery voltage as float in V. |
 
 ## History
 

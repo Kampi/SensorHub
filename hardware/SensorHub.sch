@@ -824,9 +824,9 @@ F 1 "22uH" V 3850 2650 50  0000 C CNN
 F 2 "Inductor_SMD:L_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3700 2650 50  0001 C CNN
 F 3 "https://www.mouser.de/datasheet/2/427/idc2512-1762893.pdf" H 3700 2650 50  0001 C CNN
 F 4 "Vishay / Dale" V 3981 2650 50  0001 C CNN "Mfr."
-F 5 "IDC2512ER330M" V 3890 2650 50  0001 C CNN "Mfr. No."
+F 5 "IDC2512ER220M" V 3890 2650 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 3700 2650 50  0001 C CNN "Distributor"
-F 7 "70-IDC2512ER330M" H 3700 2650 50  0001 C CNN "Order Number"
+F 7 "70-IDC2512ER220M" H 3700 2650 50  0001 C CNN "Order Number"
 	1    3700 2650
 	0    1    1    0   
 $EndComp

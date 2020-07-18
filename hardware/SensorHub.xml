@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Users\Daniel.Kampert\Desktop\Git\SensorHub\hardware\SensorHub.sch</source>
-    <date>13.07.2020 13:22:57</date>
+    <source>G:\Dropbox\Git\SensorHub\hardware\SensorHub.sch</source>
+    <date>17.07.2020 20:48:42</date>
     <tool>Eeschema (5.1.6)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Sensor Hub</title>
         <company>https://www.kampis-elektroecke.de</company>
-        <rev>1.1</rev>
-        <date>2020-07-11</date>
+        <rev>1.2</rev>
+        <date>2020-07-13</date>
         <source>SensorHub.sch</source>
         <comment number="1" value="Author: Daniel Kampert"/>
         <comment number="2" value=""/>
@@ -27,7 +27,7 @@
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Bosch Sensortec </field>
         <field name="Mfr. No.">BMP680</field>
-        <field name="Order Number">262-BME680 </field>
+        <field name="Order Number">262-BME680</field>
       </fields>
       <libsource lib="Sensor" part="BME680" description="4-in-1 sensor, gas, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"/>
       <sheetpath names="/" tstamps="/"/>
@@ -41,6 +41,7 @@
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Microchip</field>
         <field name="Mfr. No.">MCP9808T-E/MS </field>
+        <field name="Mouser">579-MCP9808T-E/MS </field>
         <field name="Order Number">579-MCP9808T-E/MS </field>
       </fields>
       <libsource lib="Microchip" part="MCP9808" description="±0.5°C Maximum Accuracy I2C Temperature Sensor."/>
@@ -136,8 +137,9 @@
       <footprint>Button_Switch_SMD:SW_DIP_SPSTx01_Slide_Omron_A6S-110x_W8.9mm_P2.54mm</footprint>
       <datasheet>~</datasheet>
       <fields>
+        <field name="Distributor">Mouser</field>
         <field name="Mfr.">Omron</field>
-        <field name="Mfr. No.">A6S-1104-PH </field>
+        <field name="Mfr. No.">A6S-1104-PH</field>
         <field name="Order Number">653-A6S1104PH</field>
       </fields>
       <libsource lib="Switch" part="SW_DIP_x01" description="1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"/>
@@ -147,7 +149,7 @@
     <comp ref="X2">
       <value>SOLAR</value>
       <footprint>Connector_TE:2-2172067-2</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&amp;DocId=Catalog+Section%7F1-1773701-8_M8M12_CONNECTOR_SYSTEM%7F1906%7Fpdf%7FEnglish%7FENG_CS_1-1773701-8_M8M12_CONNECTOR_SYSTEM_1906.pdf%7F2-2172067-2</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -175,11 +177,11 @@
     <comp ref="RV1">
       <value>10k</value>
       <footprint>Potentiometer_SMD_Kampi:Potentiometer_Vishay_TS53YJ_Vertical</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/427/ts53-1763731.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Vishay</field>
-        <field name="Mfr. No.">TS53YJ103MR10 </field>
+        <field name="Mfr. No.">TS53YJ103MR10</field>
         <field name="Order Number">72-TS53YJ-10K </field>
       </fields>
       <libsource lib="Device" part="R_POT" description="Potentiometer"/>
@@ -267,7 +269,7 @@
     <comp ref="D2">
       <value>ZLLS500</value>
       <footprint>Diode_SMD:D_SOT-23_ANK</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ZLLS500.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Diodes Incorporated</field>
@@ -293,14 +295,14 @@
       <tstamp>5ECEC91E</tstamp>
     </comp>
     <comp ref="L1">
-      <value>68uH</value>
+      <value>22uH</value>
       <footprint>Inductor_SMD:L_2512_6332Metric_Pad1.52x3.35mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/427/idc2512-1762893.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Vishay / Dale</field>
-        <field name="Mfr. No.">IDC2512ER680M</field>
-        <field name="Order Number">70-IDC2512ER680M</field>
+        <field name="Mfr. No.">IDC2512ER330M</field>
+        <field name="Order Number">70-IDC2512ER330M</field>
       </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -323,7 +325,7 @@
     <comp ref="D1">
       <value>ZLLS500</value>
       <footprint>Diode_SMD:D_SOT-23_ANK</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ZLLS500.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Diodes Incorporated</field>
@@ -449,7 +451,7 @@
     <comp ref="X1">
       <value>WIND</value>
       <footprint>Connector_TE:3-2172067-2</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&amp;DocId=Catalog+Section%7F1-1773701-8_M8M12_CONNECTOR_SYSTEM%7F1906%7Fpdf%7FEnglish%7FENG_CS_1-1773701-8_M8M12_CONNECTOR_SYSTEM_1906.pdf%7F3-2172067-2</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -768,7 +770,8 @@
         <field name="Footprint">Package_SO:MSOP-8_3x3mm_P0.65mm</field>
         <field name="Mfr.">Microchip</field>
         <field name="Mfr. No.">MCP9808T-E/MS </field>
-        <field name="Mouser">579-MCP9808T-E/MS </field>
+        <field name="Distributor">Mouser</field>
+        <field name="Order Number">579-MCP9808T-E/MS </field>
       </fields>
       <pins>
         <pin num="1" name="SDA" type="BiDi"/>
@@ -857,222 +860,222 @@
   </libparts>
   <libraries>
     <library logical="Battery_Management">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Battery_Management.lib</uri>
+      <uri>D:\KiCad\share\kicad\library/Battery_Management.lib</uri>
     </library>
     <library logical="Connector">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+      <uri>D:\KiCad\share\kicad\library/Connector.lib</uri>
     </library>
     <library logical="Connector_Generic">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+      <uri>D:\KiCad\share\kicad\library/Connector_Generic.lib</uri>
     </library>
     <library logical="DevBoards">
-      <uri>C:/Users/Daniel.Kampert/Desktop/Git/KiCAD/Symbols/DevBoards.lib</uri>
+      <uri>G:\Dropbox\Git\KiCAD/Symbols/DevBoards.lib</uri>
     </library>
     <library logical="Device">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+      <uri>D:\KiCad\share\kicad\library/Device.lib</uri>
     </library>
     <library logical="Microchip">
-      <uri>C:/Users/Daniel.Kampert/Desktop/Git/KiCAD/Symbols/Microchip.lib</uri>
+      <uri>G:\Dropbox\Git\KiCAD/Symbols/Microchip.lib</uri>
     </library>
     <library logical="Rohm">
-      <uri>C:/Users/Daniel.Kampert/Desktop/Git/KiCAD/Symbols/Rohm.lib</uri>
+      <uri>G:\Dropbox\Git\KiCAD/Symbols/Rohm.lib</uri>
     </library>
     <library logical="Sensor">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Sensor.lib</uri>
+      <uri>D:\KiCad\share\kicad\library/Sensor.lib</uri>
     </library>
     <library logical="SensorHub-rescue">
-      <uri>C:\Users\Daniel.Kampert\Desktop\Git\SensorHub\hardware/SensorHub-rescue.lib</uri>
+      <uri>G:\Dropbox\Git\SensorHub\hardware/SensorHub-rescue.lib</uri>
     </library>
     <library logical="Switch">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Switch.lib</uri>
+      <uri>D:\KiCad\share\kicad\library/Switch.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(IC2-Pad8)">
-      <node ref="R3" pin="1"/>
-      <node ref="IC2" pin="8"/>
-    </net>
-    <net code="2" name="Net-(IC2-Pad7)">
+    <net code="1" name="Net-(IC2-Pad7)">
       <node ref="IC2" pin="7"/>
       <node ref="R4" pin="1"/>
     </net>
-    <net code="3" name="Net-(C3-Pad2)">
-      <node ref="IC2" pin="12"/>
-      <node ref="L1" pin="2"/>
-      <node ref="D1" pin="1"/>
-      <node ref="C3" pin="2"/>
+    <net code="2" name="/~CHRG">
+      <node ref="M1" pin="21"/>
+      <node ref="R2" pin="2"/>
+      <node ref="IC2" pin="4"/>
+    </net>
+    <net code="3" name="Net-(IC2-Pad8)">
+      <node ref="R3" pin="1"/>
+      <node ref="IC2" pin="8"/>
     </net>
     <net code="4" name="VS">
       <node ref="R8" pin="1"/>
-      <node ref="RV1" pin="3"/>
-      <node ref="X2" pin="1"/>
-      <node ref="IC2" pin="3"/>
       <node ref="C9" pin="2"/>
+      <node ref="X2" pin="1"/>
+      <node ref="RV1" pin="3"/>
       <node ref="IC2" pin="1"/>
+      <node ref="IC2" pin="3"/>
     </net>
     <net code="5" name="+3V3">
-      <node ref="C2" pin="1"/>
-      <node ref="IC1" pin="6"/>
-      <node ref="X1" pin="1"/>
-      <node ref="M1" pin="2"/>
+      <node ref="R13" pin="1"/>
+      <node ref="R15" pin="1"/>
+      <node ref="R14" pin="1"/>
       <node ref="IC3" pin="8"/>
+      <node ref="C2" pin="1"/>
       <node ref="IC3" pin="6"/>
+      <node ref="X1" pin="1"/>
       <node ref="IC3" pin="2"/>
       <node ref="C8" pin="1"/>
+      <node ref="IC1" pin="6"/>
+      <node ref="M1" pin="2"/>
+      <node ref="C6" pin="1"/>
       <node ref="IC4" pin="2"/>
-      <node ref="R1" pin="2"/>
       <node ref="R12" pin="1"/>
       <node ref="C7" pin="1"/>
-      <node ref="C6" pin="1"/>
       <node ref="IC5" pin="8"/>
-      <node ref="R10" pin="1"/>
-      <node ref="R11" pin="1"/>
-      <node ref="R13" pin="1"/>
       <node ref="R2" pin="1"/>
-      <node ref="R14" pin="1"/>
-      <node ref="R15" pin="1"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R11" pin="1"/>
+      <node ref="R10" pin="1"/>
     </net>
-    <net code="6" name="Net-(IC2-Pad10)">
-      <node ref="R7" pin="2"/>
-      <node ref="L1" pin="1"/>
-      <node ref="IC2" pin="10"/>
+    <net code="6" name="Net-(M1-Pad13)">
+      <node ref="M1" pin="13"/>
     </net>
-    <net code="7" name="GND">
-      <node ref="X1" pin="4"/>
-      <node ref="RV1" pin="1"/>
-      <node ref="D1" pin="2"/>
-      <node ref="R6" pin="1"/>
-      <node ref="IC5" pin="4"/>
-      <node ref="IC4" pin="4"/>
-      <node ref="IC4" pin="3"/>
-      <node ref="IC4" pin="1"/>
-      <node ref="IC5" pin="7"/>
-      <node ref="IC5" pin="6"/>
-      <node ref="IC5" pin="5"/>
-      <node ref="IC3" pin="7"/>
-      <node ref="IC3" pin="5"/>
-      <node ref="C8" pin="2"/>
-      <node ref="R9" pin="1"/>
-      <node ref="C6" pin="2"/>
-      <node ref="C7" pin="2"/>
-      <node ref="IC2" pin="6"/>
-      <node ref="C9" pin="1"/>
-      <node ref="IC1" pin="1"/>
-      <node ref="M1" pin="4"/>
-      <node ref="SW1" pin="2"/>
-      <node ref="R16" pin="2"/>
-      <node ref="IC3" pin="1"/>
-      <node ref="C2" pin="2"/>
-      <node ref="IC2" pin="13"/>
-      <node ref="X2" pin="3"/>
-      <node ref="C5" pin="2"/>
-      <node ref="C4" pin="2"/>
-      <node ref="R3" pin="2"/>
+    <net code="7" name="Net-(M1-Pad12)">
+      <node ref="M1" pin="12"/>
     </net>
-    <net code="8" name="Net-(M1-Pad5)">
-      <node ref="R9" pin="2"/>
+    <net code="8" name="Net-(M1-Pad11)">
+      <node ref="M1" pin="11"/>
+    </net>
+    <net code="9" name="Net-(M1-Pad10)">
+      <node ref="M1" pin="10"/>
+    </net>
+    <net code="10" name="Net-(M1-Pad1)">
+      <node ref="M1" pin="1"/>
+    </net>
+    <net code="11" name="Net-(M1-Pad5)">
       <node ref="R8" pin="2"/>
+      <node ref="R9" pin="2"/>
       <node ref="M1" pin="5"/>
     </net>
-    <net code="9" name="/WindSensor">
-      <node ref="R12" pin="2"/>
+    <net code="12" name="GND">
+      <node ref="IC5" pin="5"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="IC3" pin="5"/>
+      <node ref="IC1" pin="1"/>
+      <node ref="IC4" pin="3"/>
+      <node ref="C7" pin="2"/>
+      <node ref="IC4" pin="4"/>
+      <node ref="IC3" pin="7"/>
+      <node ref="IC5" pin="4"/>
+      <node ref="IC5" pin="6"/>
+      <node ref="IC5" pin="7"/>
+      <node ref="IC4" pin="1"/>
+      <node ref="C9" pin="1"/>
+      <node ref="D1" pin="2"/>
+      <node ref="IC3" pin="1"/>
+      <node ref="RV1" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="IC2" pin="6"/>
+      <node ref="IC2" pin="13"/>
+      <node ref="R3" pin="2"/>
+      <node ref="R9" pin="1"/>
+      <node ref="X2" pin="3"/>
+      <node ref="R16" pin="2"/>
+      <node ref="X1" pin="4"/>
+      <node ref="M1" pin="4"/>
+      <node ref="SW1" pin="2"/>
+    </net>
+    <net code="13" name="/WindSensor">
       <node ref="M1" pin="23"/>
       <node ref="X1" pin="2"/>
+      <node ref="R12" pin="2"/>
     </net>
-    <net code="10" name="/~CHRG">
-      <node ref="M1" pin="21"/>
-      <node ref="IC2" pin="4"/>
-      <node ref="R2" pin="2"/>
+    <net code="14" name="Net-(IC2-Pad10)">
+      <node ref="L1" pin="1"/>
+      <node ref="IC2" pin="10"/>
+      <node ref="R7" pin="2"/>
     </net>
-    <net code="11" name="/~FAULT">
-      <node ref="IC2" pin="5"/>
-      <node ref="R1" pin="1"/>
+    <net code="15" name="/~FAULT">
       <node ref="M1" pin="22"/>
+      <node ref="R1" pin="1"/>
+      <node ref="IC2" pin="5"/>
     </net>
-    <net code="12" name="Net-(C3-Pad1)">
+    <net code="16" name="Net-(C3-Pad2)">
+      <node ref="D1" pin="1"/>
+      <node ref="IC2" pin="12"/>
+      <node ref="L1" pin="2"/>
+      <node ref="C3" pin="2"/>
+    </net>
+    <net code="17" name="Net-(M1-Pad14)">
+      <node ref="M1" pin="14"/>
+    </net>
+    <net code="18" name="Net-(C3-Pad1)">
+      <node ref="IC2" pin="11"/>
       <node ref="C3" pin="1"/>
       <node ref="D2" pin="1"/>
-      <node ref="IC2" pin="11"/>
     </net>
-    <net code="13" name="/SCL">
-      <node ref="IC4" pin="5"/>
-      <node ref="M1" pin="18"/>
-      <node ref="R10" pin="2"/>
-      <node ref="IC1" pin="5"/>
-      <node ref="IC3" pin="4"/>
-      <node ref="IC5" pin="2"/>
-    </net>
-    <net code="14" name="/VEML_ACK">
+    <net code="19" name="/VEML_ACK">
       <node ref="M1" pin="24"/>
       <node ref="R13" pin="2"/>
       <node ref="IC1" pin="2"/>
     </net>
-    <net code="15" name="/SDA">
+    <net code="20" name="/SCL">
+      <node ref="R10" pin="2"/>
+      <node ref="IC1" pin="5"/>
+      <node ref="IC3" pin="4"/>
+      <node ref="IC5" pin="2"/>
+      <node ref="M1" pin="18"/>
+      <node ref="IC4" pin="5"/>
+    </net>
+    <net code="21" name="/SDA">
+      <node ref="IC4" pin="6"/>
+      <node ref="IC5" pin="1"/>
+      <node ref="IC3" pin="3"/>
       <node ref="IC1" pin="3"/>
       <node ref="R11" pin="2"/>
       <node ref="M1" pin="17"/>
-      <node ref="IC3" pin="3"/>
-      <node ref="IC5" pin="1"/>
-      <node ref="IC4" pin="6"/>
     </net>
-    <net code="16" name="Net-(IC1-Pad4)">
+    <net code="22" name="Net-(IC1-Pad4)">
       <node ref="IC1" pin="4"/>
       <node ref="R16" pin="1"/>
     </net>
-    <net code="17" name="Net-(M1-Pad9)">
+    <net code="23" name="Net-(M1-Pad9)">
       <node ref="M1" pin="9"/>
     </net>
-    <net code="18" name="Net-(M1-Pad8)">
+    <net code="24" name="Net-(M1-Pad8)">
       <node ref="M1" pin="8"/>
     </net>
-    <net code="19" name="Net-(M1-Pad7)">
+    <net code="25" name="Net-(M1-Pad7)">
       <node ref="M1" pin="7"/>
     </net>
-    <net code="20" name="/WindDirection">
-      <node ref="X1" pin="3"/>
+    <net code="26" name="/WindDirection">
       <node ref="M1" pin="6"/>
+      <node ref="X1" pin="3"/>
     </net>
-    <net code="21" name="Net-(M1-Pad3)">
+    <net code="27" name="Net-(M1-Pad3)">
       <node ref="M1" pin="3"/>
     </net>
-    <net code="22" name="Net-(M1-Pad27)">
-      <node ref="SW1" pin="1"/>
+    <net code="28" name="Net-(M1-Pad27)">
       <node ref="M1" pin="27"/>
+      <node ref="SW1" pin="1"/>
     </net>
-    <net code="23" name="+5V">
+    <net code="29" name="+5V">
       <node ref="M1" pin="26"/>
     </net>
-    <net code="24" name="Net-(M1-Pad25)">
+    <net code="30" name="Net-(M1-Pad25)">
       <node ref="M1" pin="25"/>
     </net>
-    <net code="25" name="/~TempAlert">
+    <net code="31" name="/~TempAlert">
+      <node ref="IC5" pin="3"/>
       <node ref="R15" pin="2"/>
       <node ref="M1" pin="20"/>
-      <node ref="IC5" pin="3"/>
     </net>
-    <net code="26" name="Net-(M1-Pad16)">
+    <net code="32" name="Net-(M1-Pad16)">
       <node ref="M1" pin="16"/>
     </net>
-    <net code="27" name="Net-(M1-Pad15)">
+    <net code="33" name="Net-(M1-Pad15)">
       <node ref="M1" pin="15"/>
-    </net>
-    <net code="28" name="Net-(M1-Pad14)">
-      <node ref="M1" pin="14"/>
-    </net>
-    <net code="29" name="Net-(M1-Pad13)">
-      <node ref="M1" pin="13"/>
-    </net>
-    <net code="30" name="Net-(M1-Pad12)">
-      <node ref="M1" pin="12"/>
-    </net>
-    <net code="31" name="Net-(M1-Pad11)">
-      <node ref="M1" pin="11"/>
-    </net>
-    <net code="32" name="Net-(M1-Pad10)">
-      <node ref="M1" pin="10"/>
-    </net>
-    <net code="33" name="Net-(M1-Pad1)">
-      <node ref="M1" pin="1"/>
     </net>
     <net code="34" name="Net-(X2-Pad2)">
       <node ref="X2" pin="2"/>
@@ -1081,27 +1084,27 @@
       <node ref="IC4" pin="8"/>
     </net>
     <net code="36" name="Net-(IC2-Pad2)">
+      <node ref="IC2" pin="2"/>
       <node ref="RV1" pin="2"/>
       <node ref="TP1" pin="1"/>
-      <node ref="IC2" pin="2"/>
     </net>
     <net code="37" name="/LiPo+">
-      <node ref="D2" pin="2"/>
-      <node ref="C5" pin="1"/>
-      <node ref="C4" pin="1"/>
-      <node ref="R5" pin="2"/>
-      <node ref="M1" pin="28"/>
-      <node ref="R7" pin="1"/>
       <node ref="IC2" pin="9"/>
+      <node ref="C5" pin="1"/>
+      <node ref="R7" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="M1" pin="28"/>
+      <node ref="D2" pin="2"/>
+      <node ref="R5" pin="2"/>
     </net>
     <net code="38" name="Net-(R4-Pad2)">
-      <node ref="R4" pin="2"/>
-      <node ref="R5" pin="1"/>
       <node ref="R6" pin="2"/>
+      <node ref="R5" pin="1"/>
+      <node ref="R4" pin="2"/>
     </net>
     <net code="39" name="/LightAlert">
-      <node ref="IC4" pin="7"/>
       <node ref="R14" pin="2"/>
+      <node ref="IC4" pin="7"/>
       <node ref="M1" pin="19"/>
     </net>
   </nets>

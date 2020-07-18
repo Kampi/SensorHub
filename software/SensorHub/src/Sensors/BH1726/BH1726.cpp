@@ -250,8 +250,9 @@ BH1726::Error BH1726::Reset(void)
     return NO_ERROR;
 }
 
-BH1726::Error BH1726::Measure(uint16_t* Light)
+BH1726::Error BH1726::Measure(uint16_t* Light, BH1726::Register Channel)
 {
+    uint8_t Address;
     uint8_t Temp[2];
 
     if(Light == NULL)
@@ -269,7 +270,16 @@ BH1726::Error BH1726::Measure(uint16_t* Light)
         return this->_mError;
     }
 
-    if(this->_readBytes(BH1726_REGISTER_DATA0, Temp, sizeof(Temp)))
+    if(Channel == REG_0)
+    {
+        Address = BH1726_REGISTER_DATA0;
+    }
+    else
+    {
+        Address = BH1726_REGISTER_DATA1;
+    }
+
+    if(this->_readBytes(Address, Temp, sizeof(Temp)))
     {
         return this->_mError;
     }

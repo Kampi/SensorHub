@@ -71,6 +71,7 @@ class MainWindow : public QMainWindow
 
         bool _mLoggingActive;
 
+        void _connect(void);
         void _disconnect(void);
         void _createLog(QString Path);
         void _appendLog(QString Message);

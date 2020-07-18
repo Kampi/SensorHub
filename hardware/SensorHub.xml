@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>G:\Dropbox\Git\SensorHub\hardware\SensorHub.sch</source>
-    <date>17.07.2020 20:48:42</date>
+    <date>18.07.2020 15:55:44</date>
     <tool>Eeschema (5.1.6)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -211,28 +211,28 @@
       <tstamp>5EBE7329</tstamp>
     </comp>
     <comp ref="R4">
-      <value>220k</value>
+      <value>205k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/348/ktr-e-1139187.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
-        <field name="Mfr.">TE Connectivity</field>
-        <field name="Mfr. No.">CRGP0805F220K</field>
-        <field name="Order Number">279-CRGP0805F220K</field>
+        <field name="Mfr.">Rohm Semiconductor</field>
+        <field name="Mfr. No.">KTR10EZPF2053</field>
+        <field name="Order Number">755-KTR10EZPF2053</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EC126EC</tstamp>
     </comp>
     <comp ref="R5">
-      <value>47k</value>
+      <value>56k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/348/ktr-e-1139187.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
-        <field name="Mfr.">TE Connectivity</field>
-        <field name="Mfr. No.">CRGP0805F47K</field>
-        <field name="Order Number">279-CRGP0805F47K</field>
+        <field name="Mfr.">Rohm Semiconductor</field>
+        <field name="Mfr. No.">KTR10EZPF5602</field>
+        <field name="Order Number">755-KTR10EZPF5602</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -301,8 +301,8 @@
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Vishay / Dale</field>
-        <field name="Mfr. No.">IDC2512ER330M</field>
-        <field name="Order Number">70-IDC2512ER330M</field>
+        <field name="Mfr. No.">IDC2512ER220M</field>
+        <field name="Order Number">70-IDC2512ER220M</field>
       </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -353,12 +353,12 @@
     <comp ref="R6">
       <value>220k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/ProductDetail/Bourns/CHV0805-FX-2203ELF?qs=m3kjewahW8RZW%252Bu5iRLQQg%3D%3D</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
-        <field name="Mfr.">TE Connectivity</field>
-        <field name="Mfr. No.">CRGP0805F220K</field>
-        <field name="Order Number">279-CRGP0805F220K</field>
+        <field name="Mfr.">Bourns</field>
+        <field name="Mfr. No.">CHV0805-FX-2203ELF</field>
+        <field name="Order Number">652-CHV0805FX2203ELF</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>

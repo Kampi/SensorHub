@@ -1,0 +1,26 @@
+Ref;Description;Value;Footprint;Mfr.;Mfr. Part Nr.;Distributor;Order Number;Qnty
+C2, C6, C7, C8;Unpolarized capacitor;100nF;C_0805_2012Metric_Pad1.15x1.40mm_HandSolder;Kemet;C0805C104K5RAC7411;Mouser;80-C0805C104K5RACLR;4
+C3;Unpolarized capacitor;1uF;C_0805_2012Metric_Pad1.15x1.40mm_HandSolder;Kemet;C0805X105K3RAC3316;Mouser;80-C0805X105K3R3316;1
+C4, C9;Unpolarized capacitor;10uF;C_0805_2012Metric_Pad1.15x1.40mm_HandSolder;TDK;C2012X7S1E106K125AE;Mouser;810-C2012X7S1E106125;2
+C5;Polarized capacitor;100uF;CP_EIA-1608-08_AVX-J_Pad1.25x1.05mm_HandSolder;AVX;F980J107MMAAXE;Mouser;581-F980J107MMAAXE;1
+D1, D2;Schottky diode;ZLLS500;D_SOT-23_ANK;Diodes Incorporated;ZLLS500TA;Mouser;522-ZLLS500TA;2
+IC1;;VEML6070;OPLGA-6;Vishay Semiconductors;VEML6070;Mouser;78-VEML6070;1
+IC2;Step-down  battery charger, Lithium Phosphate ( LiFePO4), Lead (Pb), Lithium+ (Li+) , 4.95V to 32V VDD, -40 to +125 degree Celcius, MSOP-12;LT3652EMSE;MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm;Analog Devices;LT3652EMSE#PBF;Mouser;584-LT3652EMSE#PBF;1
+IC3;4-in-1 sensor, gas, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8;BME680;Bosch_LGA-8_3x3mm_P0.8mm_ClockwisePinNumbering;Bosch Sensortec ;BMP680;Mouser;262-BME680;1
+IC4;;BH1726;WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm;Rohm Semiconductor;BH1726NUC-E2 ;Mouser;755-BH1726NUC-E2;1
+IC5;±0.5°C Maximum Accuracy I2C Temperature Sensor.;MCP9808;MSOP-8_3x3mm_P0.65mm;Microchip;MCP9808T-E/MS ;Mouser;579-MCP9808T-E/MS;1
+L1;Inductor;22uH;L_2512_6332Metric_Pad1.52x3.35mm_HandSolder;Vishay / Dale;IDC2512ER220M;Mouser;70-IDC2512ER220M;1
+M1;;ParticleArgon;ParticleArgon;Particle;ARGNKIT ;Mouser;465-ARGNKIT;1
+R1, R2;Resistor;10k;R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;TE Connectivity;CRGP0805F10K;Mouser;279-CRGP0805F10K;2
+R3;Resistor;NTC;PinHeader_1x02_P2.54mm_Vertical;Murata Electronics;NXRT15XH103FA5B040;Mouser;81-NXRT15XH103FA5B040;1
+R4, R6;Resistor;220k;R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;TE Connectivity;CRGP0805F220K;Mouser;279-CRGP0805F220K;2
+R5;Resistor;47k;R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;TE Connectivity;CRGP0805F47K;Mouser;279-CRGP0805F47K;1
+R7;Resistor;0R22;R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;Panasonic;ERJ-U6QJR22V;Mouser;667-ERJ-U6QJR22V;1
+R8;Resistor;100k;R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;Vishay / Draloric;TNPW0805100KBYEA;Mouser;71-TNPW0805100KBYEA;1
+R9;Resistor;22k;R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;Vishay / Dale;TNPW080522K0BEEA;Mouser;71-TNPW080522K0BEEA;1
+R10, R11, R12, R13, R14, R15;Resistor;3k3;R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;TE Connectivity;CRGP0805F3K3;Mouser;279-CRGP0805F3K3;6
+R16;Resistor;270k;R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;TE Connectivity;CRGP0805F270K;Mouser;279-CRGP0805F270K;1
+RV1;Potentiometer;10k;Potentiometer_Vishay_TS53YJ_Vertical;Vishay;TS53YJ103MR10 ;Mouser;72-TS53YJ-10K;1
+SW1;1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol;ENABLE;SW_DIP_SPSTx01_Slide_Omron_A6S-110x_W8.9mm_P2.54mm;Omron;A6S-1104-PH;Mouser;653-A6S1104PH;1
+X1;Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/);WIND;3-2172067-2;TE Connectivity;3-2172067-2;Mouser;571-3-2172067-2;1
+X2;Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/);SOLAR;2-2172067-2;TE Connectivity;2-2172067-2;Mouser;571-2-2172067-2;1

@@ -5,8 +5,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "Sensor Hub"
-Date "2020-07-11"
-Rev "1.1"
+Date "2020-07-13"
+Rev "1.2"
 Comp "https://www.kampis-elektroecke.de"
 Comment1 "Author: Daniel Kampert"
 Comment2 ""
@@ -24,7 +24,7 @@ F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME680-D
 F 4 "Bosch Sensortec " H 11121 2600 50  0001 R CNN "Mfr."
 F 5 "BMP680" H 11121 2509 50  0001 R CNN "Mfr. No."
 F 6 "Mouser" H 11550 2600 50  0001 C CNN "Distributor"
-F 7 "262-BME680 " H 11550 2600 50  0001 C CNN "Order Number"
+F 7 "262-BME680" H 11550 2600 50  0001 C CNN "Order Number"
 	1    11550 2600
 	1    0    0    -1  
 $EndComp
@@ -38,7 +38,7 @@ F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 9500 2650 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25095A.pdf" H 9500 2650 50  0001 C CNN
 F 4 "Microchip" H 9500 2650 50  0001 C CNN "Mfr."
 F 5 "MCP9808T-E/MS " H 9500 2650 50  0001 C CNN "Mfr. No."
-F 6 "" H 9500 2650 50  0001 C CNN "Mouser"
+F 6 "579-MCP9808T-E/MS " H 9500 2650 50  0001 C CNN "Mouser"
 F 7 "Mouser" H 9500 2650 50  0001 C CNN "Distributor"
 F 8 "579-MCP9808T-E/MS " H 9500 2650 50  0001 C CNN "Order Number"
 	1    9500 2650
@@ -625,8 +625,6 @@ F 3 "" H 2400 4350 50  0001 C CNN
 	1    2400 4350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2400 3800 2400 4200
 $Comp
 L Device:R_POT RV1
 U 1 1 5EB66EA8
@@ -709,11 +707,6 @@ F 7 "279-CRGP0805F10K" H 1300 2800 50  0001 C CNN "Order Number"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1850 4200 2400 4200
-Connection ~ 2400 4200
-Wire Wire Line
-	2400 4200 2400 4350
-Wire Wire Line
 	1900 3600 1850 3600
 $Comp
 L Device:R R4
@@ -745,8 +738,6 @@ F 7 "279-CRGP0805F47K" H 3650 3400 50  0001 C CNN "Order Number"
 	1    3650 3400
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2400 4200 3050 4200
 Wire Wire Line
 	3650 4200 3650 4100
 Wire Wire Line
@@ -801,7 +792,7 @@ P 4200 2550
 F 0 "D2" H 4200 2766 50  0000 C CNN
 F 1 "ZLLS500" H 4200 2675 50  0000 C CNN
 F 2 "Diode_SMD:D_SOT-23_ANK" H 4200 2550 50  0001 C CNN
-F 3 "~" H 4200 2550 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ZLLS500.pdf" H 4200 2550 50  0001 C CNN
 F 4 "Diodes Incorporated" H 4200 2550 50  0001 C CNN "Mfr."
 F 5 "ZLLS500TA" H 4200 2550 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 4200 2550 50  0001 C CNN "Distributor"
@@ -829,13 +820,13 @@ L Device:L L1
 U 1 1 5ECFD6B7
 P 3700 2650
 F 0 "L1" V 3775 2650 50  0000 C CNN
-F 1 "68uH" V 3850 2650 50  0000 C CNN
+F 1 "22uH" V 3850 2650 50  0000 C CNN
 F 2 "Inductor_SMD:L_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3700 2650 50  0001 C CNN
-F 3 "~" H 3700 2650 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/427/idc2512-1762893.pdf" H 3700 2650 50  0001 C CNN
 F 4 "Vishay / Dale" V 3981 2650 50  0001 C CNN "Mfr."
-F 5 "IDC2512ER680M" V 3890 2650 50  0001 C CNN "Mfr. No."
+F 5 "IDC2512ER330M" V 3890 2650 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 3700 2650 50  0001 C CNN "Distributor"
-F 7 "70-IDC2512ER680M" H 3700 2650 50  0001 C CNN "Order Number"
+F 7 "70-IDC2512ER330M" H 3700 2650 50  0001 C CNN "Order Number"
 	1    3700 2650
 	0    1    1    0   
 $EndComp
@@ -876,7 +867,7 @@ P 3800 3700
 F 0 "D1" H 3800 3916 50  0000 C CNN
 F 1 "ZLLS500" H 3800 3825 50  0000 C CNN
 F 2 "Diode_SMD:D_SOT-23_ANK" H 3800 3700 50  0001 C CNN
-F 3 "~" H 3800 3700 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ZLLS500.pdf" H 3800 3700 50  0001 C CNN
 F 4 "Diodes Incorporated" H 3800 3700 50  0001 C CNN "Mfr."
 F 5 "ZLLS500TA" H 3800 3700 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 3800 3700 50  0001 C CNN "Distributor"
@@ -1082,9 +1073,8 @@ Wire Wire Line
 	3050 3500 3050 3800
 Wire Wire Line
 	3050 4100 3050 4200
-Connection ~ 3050 4200
 Wire Wire Line
-	3050 4200 3650 4200
+	3050 4200 3350 4200
 $Comp
 L Battery_Management:LT3652EMSE IC2
 U 1 1 5F070109
@@ -1194,9 +1184,7 @@ Wire Wire Line
 Text Notes 750  900  0    50   ~ 0
 - Connect NTC with battery pack (optional).\n
 Text Notes 750  750  0    50   ~ 0
-- Set the voltage at the SET testpoint to 2.8 V in maximum sun.
-Text Notes 750  1050 0    50   ~ 0
-- Adjust R8 to increase or decrease the maximum charge current.
+- Set the voltage at the SET testpoint to >2.7 V in maximum sun.
 Text Notes 775  10100 0    100  ~ 20
 Device
 Text Notes 1725 10100 0    100  ~ 20
@@ -1278,9 +1266,9 @@ Wire Wire Line
 	7550 6500 7600 6500
 Wire Wire Line
 	9900 2650 10100 2650
-Text Notes 750  1200 0    50   ~ 0
+Text Notes 750  1050 0    50   ~ 0
 - The device is powered by an external solar panel with a minimum output power of 2 W and a voltage from 6 V to 20 V.
-Text Notes 750  1350 0    50   ~ 0
+Text Notes 750  1200 0    50   ~ 0
 - Interface for a Davis Anemometer for wind speed and wind direction measurement.
 NoConn ~ 8800 7000
 Wire Wire Line
@@ -1542,6 +1530,35 @@ Text Notes 1725 10950 0    100  ~ 0
 0x38
 Text Notes 5450 6300 0    50   ~ 0
 The voltage divider is designed\nfor a 17.8 V solar panel.
+$Comp
+L power:GND #PWR?
+U 1 1 5F0D963C
+P 1850 4350
+F 0 "#PWR?" H 1850 4100 50  0001 C CNN
+F 1 "GND" H 1855 4177 50  0000 C CNN
+F 2 "" H 1850 4350 50  0001 C CNN
+F 3 "" H 1850 4350 50  0001 C CNN
+	1    1850 4350
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	1850 3600 1850 4200
+	1850 3600 1850 4350
+$Comp
+L power:GND #PWR?
+U 1 1 5F0EDDBF
+P 3350 4350
+F 0 "#PWR?" H 3350 4100 50  0001 C CNN
+F 1 "GND" H 3355 4177 50  0000 C CNN
+F 2 "" H 3350 4350 50  0001 C CNN
+F 3 "" H 3350 4350 50  0001 C CNN
+	1    3350 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 4350 3350 4200
+Connection ~ 3350 4200
+Wire Wire Line
+	3350 4200 3650 4200
+Wire Wire Line
+	2400 3800 2400 4350
 $EndSCHEMATC

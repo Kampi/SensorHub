@@ -1,0 +1,6 @@
+0.1				Initial release
+0.2				Optimize routing of the DC/DC converter
+				Add LiPo voltage and solar voltage to MQTT message
+				Change values for 'R4', 'R5', 'R6', 'R8' and 'R9' to improve voltage measurement and LiPo charging
+				Fix some smaller bugs in Qt application for the Raspberry Pi
+				Fix broken logging in Qt application for the Raspberry Pi

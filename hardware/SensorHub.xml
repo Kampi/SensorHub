@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>G:\Dropbox\Git\SensorHub\hardware\SensorHub.sch</source>
-    <date>18.07.2020 15:55:44</date>
+    <date>18.07.2020 17:52:20</date>
     <tool>Eeschema (5.1.6)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -65,7 +65,7 @@
     <comp ref="R11">
       <value>3k3</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -79,7 +79,7 @@
     <comp ref="R10">
       <value>3k3</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -93,7 +93,7 @@
     <comp ref="C8">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Kemet</field>
@@ -107,7 +107,7 @@
     <comp ref="C6">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Kemet</field>
@@ -121,7 +121,7 @@
     <comp ref="C7">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Kemet</field>
@@ -135,7 +135,7 @@
     <comp ref="SW1">
       <value>ENABLE</value>
       <footprint>Button_Switch_SMD:SW_DIP_SPSTx01_Slide_Omron_A6S-110x_W8.9mm_P2.54mm</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/307/en-a6s-1224092.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Omron</field>
@@ -163,7 +163,7 @@
     <comp ref="R12">
       <value>3k3</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -199,7 +199,7 @@
     <comp ref="R1">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -241,7 +241,7 @@
     <comp ref="C4">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_soft_en.pdf?ref_disty=mouser</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TDK</field>
@@ -255,7 +255,7 @@
     <comp ref="C5">
       <value>100uF</value>
       <footprint>Capacitor_Tantalum_SMD:CP_EIA-1608-08_AVX-J_Pad1.25x1.05mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/40/f98-775787.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">AVX</field>
@@ -283,7 +283,7 @@
     <comp ref="C3">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/212/KEM_X7R_FT_VW_AUDI-1775098.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Kemet</field>
@@ -311,7 +311,7 @@
     <comp ref="R7">
       <value>0R22</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/315/AOA0000C334-1314047.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Panasonic</field>
@@ -339,7 +339,7 @@
     <comp ref="C9">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_soft_en.pdf?ref_disty=mouser</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TDK</field>
@@ -367,7 +367,7 @@
     <comp ref="R2">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -381,12 +381,12 @@
     <comp ref="R3">
       <value>NTC</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/281/r44e-3685.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Murata Electronics</field>
         <field name="Mfr. No.">NXRT15XH103FA5B040</field>
-        <field name="Order Number">81-NXRT15XH103FA5B040</field>
+        <field name="Order Number">81-NXRT15XH103FA5B40</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -407,28 +407,28 @@
       <tstamp>5F070109</tstamp>
     </comp>
     <comp ref="R9">
-      <value>22k</value>
+      <value>20k5</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/348/ktr-e-1139187.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
-        <field name="Mfr.">Vishay / Dale</field>
-        <field name="Mfr. No.">TNPW080522K0BEEA</field>
-        <field name="Order Number">71-TNPW080522K0BEEA</field>
+        <field name="Mfr.">ROHM Semiconductor</field>
+        <field name="Mfr. No.">KTR10EZPF2052</field>
+        <field name="Order Number">755-KTR10EZPF2052</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EC304C7</tstamp>
     </comp>
     <comp ref="R8">
-      <value>100k</value>
+      <value>120k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/348/ktr-e-1139187.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
-        <field name="Mfr.">Vishay / Draloric</field>
-        <field name="Mfr. No.">TNPW0805100KBYEA</field>
-        <field name="Order Number">71-TNPW0805100KBYEA</field>
+        <field name="Mfr.">Rohm Semiconductor</field>
+        <field name="Mfr. No.">KTR10EZPF1203</field>
+        <field name="Order Number">755-KTR10EZPF1203</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -465,7 +465,7 @@
     <comp ref="C2">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">Kemet</field>
@@ -493,7 +493,7 @@
     <comp ref="R15">
       <value>3k3</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -507,7 +507,7 @@
     <comp ref="R14">
       <value>3k3</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -521,7 +521,7 @@
     <comp ref="R13">
       <value>3k3</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>
@@ -535,7 +535,7 @@
     <comp ref="R16">
       <value>270k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf</datasheet>
       <fields>
         <field name="Distributor">Mouser</field>
         <field name="Mfr.">TE Connectivity</field>

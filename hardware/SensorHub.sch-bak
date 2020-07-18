@@ -713,13 +713,13 @@ L Device:R R4
 U 1 1 5EC126EC
 P 3400 3600
 F 0 "R4" V 3400 3550 50  0000 L CNN
-F 1 "43k" V 3500 3550 50  0000 L CNN
+F 1 "205k" V 3500 3550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3330 3600 50  0001 C CNN
 F 3 "https://www.mouser.de/datasheet/2/348/ktr-e-1139187.pdf" H 3400 3600 50  0001 C CNN
 F 4 "Rohm Semiconductor" H 3400 3600 50  0001 C CNN "Mfr."
-F 5 "KTR10EZPF4302" H 3400 3600 50  0001 C CNN "Mfr. No."
+F 5 "KTR10EZPF2053" H 3400 3600 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 3400 3600 50  0001 C CNN "Distributor"
-F 7 "755-KTR10EZPF4302" H 3400 3600 50  0001 C CNN "Order Number"
+F 7 "755-KTR10EZPF2053" H 3400 3600 50  0001 C CNN "Order Number"
 	1    3400 3600
 	0    -1   -1   0   
 $EndComp
@@ -850,7 +850,7 @@ P 4200 2750
 F 0 "R7" V 4200 2700 50  0000 L CNN
 F 1 "0R22" V 4300 2700 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4130 2750 50  0001 C CNN
-F 3 "~" H 4200 2750 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/315/AOA0000C334-1314047.pdf" H 4200 2750 50  0001 C CNN
 F 4 "Panasonic" H 4200 2750 50  0001 C CNN "Mfr."
 F 5 "ERJ-U6QJR22V" H 4200 2750 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 4200 2750 50  0001 C CNN "Distributor"
@@ -1123,13 +1123,13 @@ L Device:R R9
 U 1 1 5EC304C7
 P 6900 6600
 F 0 "R9" V 6900 6550 50  0000 L CNN
-F 1 "22k" V 6800 6550 50  0000 L CNN
+F 1 "20k5" V 6800 6550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 6600 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf" H 6900 6600 50  0001 C CNN
-F 4 "Vishay / Dale" H 6900 6600 50  0001 C CNN "Mfr."
-F 5 "TNPW080522K0BEEA" H 6900 6600 50  0001 C CNN "Mfr. No."
+F 3 "https://www.mouser.de/datasheet/2/348/ktr-e-1139187.pdf" H 6900 6600 50  0001 C CNN
+F 4 "ROHM Semiconductor" H 6900 6600 50  0001 C CNN "Mfr."
+F 5 "KTR10EZPF2052" H 6900 6600 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 6900 6600 50  0001 C CNN "Distributor"
-F 7 "71-TNPW080522K0BEEA" H 6900 6600 50  0001 C CNN "Order Number"
+F 7 "755-KTR10EZPF2052" H 6900 6600 50  0001 C CNN "Order Number"
 	1    6900 6600
 	-1   0    0    1   
 $EndComp
@@ -1138,13 +1138,13 @@ L Device:R R8
 U 1 1 5EC304D1
 P 6900 6200
 F 0 "R8" V 6900 6150 50  0000 L CNN
-F 1 "100k" V 7000 6150 50  0000 L CNN
+F 1 "120k" V 7000 6150 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 6200 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf" H 6900 6200 50  0001 C CNN
-F 4 "Vishay / Draloric" H 6900 6200 50  0001 C CNN "Mfr."
-F 5 "TNPW0805100KBYEA" H 6900 6200 50  0001 C CNN "Mfr. No."
+F 3 "https://www.mouser.de/datasheet/2/348/ktr-e-1139187.pdf" H 6900 6200 50  0001 C CNN
+F 4 "Rohm Semiconductor" H 6900 6200 50  0001 C CNN "Mfr."
+F 5 "KTR10EZPF1203" H 6900 6200 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 6900 6200 50  0001 C CNN "Distributor"
-F 7 "71-TNPW0805100KBYEA" H 6900 6200 50  0001 C CNN "Order Number"
+F 7 "755-KTR10EZPF1203" H 6900 6200 50  0001 C CNN "Order Number"
 	1    6900 6200
 	1    0    0    -1  
 $EndComp
@@ -1528,13 +1528,13 @@ Text Notes 750  10950 0    100  ~ 0
 VEML6070
 Text Notes 1725 10950 0    100  ~ 0
 0x38
-Text Notes 5450 6300 0    50   ~ 0
-The voltage divider is designed\nfor a 17.8 V solar panel.
+Text Notes 5350 5900 0    50   ~ 0
+The voltage divider is designed\nfor an open circuit voltage of 22.3 V.
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 5F0D963C
 P 1850 4350
-F 0 "#PWR?" H 1850 4100 50  0001 C CNN
+F 0 "#PWR0104" H 1850 4100 50  0001 C CNN
 F 1 "GND" H 1855 4177 50  0000 C CNN
 F 2 "" H 1850 4350 50  0001 C CNN
 F 3 "" H 1850 4350 50  0001 C CNN
@@ -1544,10 +1544,10 @@ $EndComp
 Wire Wire Line
 	1850 3600 1850 4350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0105
 U 1 1 5F0EDDBF
 P 3350 4350
-F 0 "#PWR?" H 3350 4100 50  0001 C CNN
+F 0 "#PWR0105" H 3350 4100 50  0001 C CNN
 F 1 "GND" H 3355 4177 50  0000 C CNN
 F 2 "" H 3350 4350 50  0001 C CNN
 F 3 "" H 3350 4350 50  0001 C CNN

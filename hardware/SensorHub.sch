@@ -66,7 +66,7 @@ P 9700 7600
 F 0 "R11" V 9700 7550 50  0000 L CNN
 F 1 "3k3" V 9800 7550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9630 7600 50  0001 C CNN
-F 3 "~" H 9700 7600 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf" H 9700 7600 50  0001 C CNN
 F 4 "TE Connectivity" H 9700 7600 50  0001 C CNN "Mfr."
 F 5 "CRGP0805F3K3" H 9700 7600 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 9700 7600 50  0001 C CNN "Distributor"
@@ -81,7 +81,7 @@ P 9600 7600
 F 0 "R10" V 9600 7550 50  0000 L CNN
 F 1 "3k3" V 9500 7550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9530 7600 50  0001 C CNN
-F 3 "~" H 9600 7600 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf" H 9600 7600 50  0001 C CNN
 F 4 "TE Connectivity" H 9600 7600 50  0001 C CNN "Mfr."
 F 5 "CRGP0805F3K3" H 9600 7600 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 9600 7600 50  0001 C CNN "Distributor"
@@ -188,7 +188,7 @@ P 11900 1750
 F 0 "C8" H 12015 1796 50  0000 L CNN
 F 1 "100nF" H 12015 1705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 11938 1600 50  0001 C CNN
-F 3 "~" H 11900 1750 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 11900 1750 50  0001 C CNN
 F 4 "Kemet" H 11900 1750 50  0001 C CNN "Mfr."
 F 5 "C0805C104K5RAC7411" H 11900 1750 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 11900 1750 50  0001 C CNN "Distributor"
@@ -321,7 +321,7 @@ P 7400 1850
 F 0 "C6" H 7515 1896 50  0000 L CNN
 F 1 "100nF" H 7515 1805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7438 1700 50  0001 C CNN
-F 3 "~" H 7400 1850 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 7400 1850 50  0001 C CNN
 F 4 "Kemet" H 7400 1850 50  0001 C CNN "Mfr."
 F 5 "C0805C104K5RAC7411" H 7400 1850 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 7400 1850 50  0001 C CNN "Distributor"
@@ -382,7 +382,7 @@ P 9800 1800
 F 0 "C7" H 9915 1846 50  0000 L CNN
 F 1 "100nF" H 9915 1755 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9838 1650 50  0001 C CNN
-F 3 "~" H 9800 1800 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 9800 1800 50  0001 C CNN
 F 4 "Kemet" H 9800 1800 50  0001 C CNN "Mfr."
 F 5 "C0805C104K5RAC7411" H 9800 1800 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 9800 1800 50  0001 C CNN "Distributor"
@@ -462,7 +462,7 @@ P 9250 6500
 F 0 "SW1" H 9250 6767 50  0000 C CNN
 F 1 "ENABLE" H 9250 6676 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_Omron_A6S-110x_W8.9mm_P2.54mm" H 9250 6500 50  0001 C CNN
-F 3 "~" H 9250 6500 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/307/en-a6s-1224092.pdf" H 9250 6500 50  0001 C CNN
 F 4 "Omron" H 9250 6857 50  0001 C CNN "Mfr."
 F 5 "A6S-1104-PH" H 9250 6766 50  0001 C CNN "Mfr. No."
 F 6 "653-A6S1104PH" H 9250 6500 50  0001 C CNN "Order Number"
@@ -528,7 +528,7 @@ P 2250 6900
 F 0 "R12" V 2250 6850 50  0000 L CNN
 F 1 "3k3" V 2350 6850 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2180 6900 50  0001 C CNN
-F 3 "~" H 2250 6900 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf" H 2250 6900 50  0001 C CNN
 F 4 "TE Connectivity" H 2250 6900 50  0001 C CNN "Mfr."
 F 5 "CRGP0805F3K3" H 2250 6900 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 2250 6900 50  0001 C CNN "Distributor"
@@ -698,7 +698,7 @@ P 1300 2800
 F 0 "R1" V 1300 2750 50  0000 L CNN
 F 1 "10k" V 1350 2550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1230 2800 50  0001 C CNN
-F 3 "~" H 1300 2800 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf" H 1300 2800 50  0001 C CNN
 F 4 "TE Connectivity" H 1300 2800 50  0001 C CNN "Mfr."
 F 5 "CRGP0805F10K" H 1300 2800 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 1300 2800 50  0001 C CNN "Distributor"
@@ -762,7 +762,7 @@ P 4550 3550
 F 0 "C4" H 4665 3596 50  0000 L CNN
 F 1 "10uF" H 4665 3505 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4588 3400 50  0001 C CNN
-F 3 "~" H 4550 3550 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_soft_en.pdf?ref_disty=mouser" H 4550 3550 50  0001 C CNN
 F 4 "TDK" H 4550 3550 50  0001 C CNN "Mfr."
 F 5 "C2012X7S1E106K125AE" H 4550 3550 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 4550 3550 50  0001 C CNN "Distributor"
@@ -777,7 +777,7 @@ P 5000 3550
 F 0 "C5" H 5118 3596 50  0000 L CNN
 F 1 "100uF" H 5118 3505 50  0000 L CNN
 F 2 "Capacitor_Tantalum_SMD:CP_EIA-1608-08_AVX-J_Pad1.25x1.05mm_HandSolder" H 5038 3400 50  0001 C CNN
-F 3 "~" H 5000 3550 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/40/f98-775787.pdf" H 5000 3550 50  0001 C CNN
 F 4 "AVX" H 5000 3550 50  0001 C CNN "Mfr."
 F 5 "F980J107MMAAXE" H 5000 3550 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 5000 3550 50  0001 C CNN "Distributor"
@@ -807,7 +807,7 @@ P 3300 2950
 F 0 "C3" H 3415 2996 50  0000 L CNN
 F 1 "1uF" H 3415 2905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3338 2800 50  0001 C CNN
-F 3 "~" H 3300 2950 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/212/KEM_X7R_FT_VW_AUDI-1775098.pdf" H 3300 2950 50  0001 C CNN
 F 4 "Kemet" H 3300 2950 50  0001 C CNN "Mfr."
 F 5 "C0805X105K3RAC3316" H 3300 2950 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 3300 2950 50  0001 C CNN "Distributor"
@@ -850,7 +850,7 @@ P 4200 2750
 F 0 "R7" V 4200 2700 50  0000 L CNN
 F 1 "0R22" V 4300 2700 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4130 2750 50  0001 C CNN
-F 3 "~" H 4200 2750 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/315/AOA0000C334-1314047.pdf" H 4200 2750 50  0001 C CNN
 F 4 "Panasonic" H 4200 2750 50  0001 C CNN "Mfr."
 F 5 "ERJ-U6QJR22V" H 4200 2750 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 4200 2750 50  0001 C CNN "Distributor"
@@ -882,7 +882,7 @@ P 1600 8575
 F 0 "C9" H 1715 8621 50  0000 L CNN
 F 1 "10uF" H 1715 8530 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1638 8425 50  0001 C CNN
-F 3 "~" H 1600 8575 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_soft_en.pdf?ref_disty=mouser" H 1600 8575 50  0001 C CNN
 F 4 "TDK" H 1600 8575 50  0001 C CNN "Mfr."
 F 5 "C2012X7S1E106K125AE" H 1600 8575 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 1600 8575 50  0001 C CNN "Distributor"
@@ -1025,7 +1025,7 @@ P 1400 2800
 F 0 "R2" V 1400 2750 50  0000 L CNN
 F 1 "10k" V 1350 2900 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1330 2800 50  0001 C CNN
-F 3 "~" H 1400 2800 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf" H 1400 2800 50  0001 C CNN
 F 4 "TE Connectivity" H 1400 2800 50  0001 C CNN "Mfr."
 F 5 "CRGP0805F10K" H 1400 2800 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 1400 2800 50  0001 C CNN "Distributor"
@@ -1059,11 +1059,11 @@ P 3050 3950
 F 0 "R3" H 3120 3996 50  0000 L CNN
 F 1 "NTC" H 3120 3905 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 2980 3950 50  0001 C CNN
-F 3 "~" H 3050 3950 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/281/r44e-3685.pdf" H 3050 3950 50  0001 C CNN
 F 4 "Murata Electronics" H 3120 3950 50  0001 L CNN "Mfr."
 F 5 "NXRT15XH103FA5B040" H 3120 3859 50  0001 L CNN "Mfr. No."
 F 6 "Mouser" H 3050 3950 50  0001 C CNN "Distributor"
-F 7 "81-NXRT15XH103FA5B040" H 3050 3950 50  0001 C CNN "Order Number"
+F 7 "81-NXRT15XH103FA5B40" H 3050 3950 50  0001 C CNN "Order Number"
 	1    3050 3950
 	1    0    0    -1  
 $EndComp
@@ -1075,21 +1075,6 @@ Wire Wire Line
 	3050 4100 3050 4200
 Wire Wire Line
 	3050 4200 3350 4200
-$Comp
-L Battery_Management:LT3652EMSE IC2
-U 1 1 5F070109
-P 2400 3300
-F 0 "IC2" H 2050 3750 50  0000 C CNN
-F 1 "LT3652EMSE" H 2250 2850 50  0000 C CNN
-F 2 "Package_SO:MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm" H 2400 2700 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3652fe.pdf" H 3000 2500 50  0001 C CNN
-F 4 "Analog Devices" H 2400 3889 50  0001 C CNN "Mfr."
-F 5 "LT3652EMSE#PBF" H 2400 3300 50  0001 C CNN "Mfr. No."
-F 6 "Mouser" H 2400 3300 50  0001 C CNN "Distributor"
-F 7 "584-LT3652EMSE#PBF" H 2400 3300 50  0001 C CNN "Order Number"
-	1    2400 3300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4550 2750 4550 2550
 Wire Wire Line
@@ -1123,13 +1108,13 @@ L Device:R R9
 U 1 1 5EC304C7
 P 6900 6600
 F 0 "R9" V 6900 6550 50  0000 L CNN
-F 1 "22k" V 6800 6550 50  0000 L CNN
+F 1 "20k5" V 6800 6550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 6600 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf" H 6900 6600 50  0001 C CNN
-F 4 "Vishay / Dale" H 6900 6600 50  0001 C CNN "Mfr."
-F 5 "TNPW080522K0BEEA" H 6900 6600 50  0001 C CNN "Mfr. No."
+F 3 "https://www.mouser.de/datasheet/2/348/ktr-e-1139187.pdf" H 6900 6600 50  0001 C CNN
+F 4 "ROHM Semiconductor" H 6900 6600 50  0001 C CNN "Mfr."
+F 5 "KTR10EZPF2052" H 6900 6600 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 6900 6600 50  0001 C CNN "Distributor"
-F 7 "71-TNPW080522K0BEEA" H 6900 6600 50  0001 C CNN "Order Number"
+F 7 "755-KTR10EZPF2052" H 6900 6600 50  0001 C CNN "Order Number"
 	1    6900 6600
 	-1   0    0    1   
 $EndComp
@@ -1138,13 +1123,13 @@ L Device:R R8
 U 1 1 5EC304D1
 P 6900 6200
 F 0 "R8" V 6900 6150 50  0000 L CNN
-F 1 "100k" V 7000 6150 50  0000 L CNN
+F 1 "120k" V 7000 6150 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 6200 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/427/tnpw_e3-1761965.pdf" H 6900 6200 50  0001 C CNN
-F 4 "Vishay / Draloric" H 6900 6200 50  0001 C CNN "Mfr."
-F 5 "TNPW0805100KBYEA" H 6900 6200 50  0001 C CNN "Mfr. No."
+F 3 "https://www.mouser.de/datasheet/2/348/ktr-e-1139187.pdf" H 6900 6200 50  0001 C CNN
+F 4 "Rohm Semiconductor" H 6900 6200 50  0001 C CNN "Mfr."
+F 5 "KTR10EZPF1203" H 6900 6200 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 6900 6200 50  0001 C CNN "Distributor"
-F 7 "71-TNPW0805100KBYEA" H 6900 6200 50  0001 C CNN "Order Number"
+F 7 "755-KTR10EZPF1203" H 6900 6200 50  0001 C CNN "Order Number"
 	1    6900 6200
 	1    0    0    -1  
 $EndComp
@@ -1286,7 +1271,7 @@ P 14100 1850
 F 0 "C2" H 14215 1896 50  0000 L CNN
 F 1 "100nF" H 14215 1805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 14138 1700 50  0001 C CNN
-F 3 "~" H 14100 1850 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf" H 14100 1850 50  0001 C CNN
 F 4 "Kemet" H 14100 1850 50  0001 C CNN "Mfr."
 F 5 "C0805C104K5RAC7411" H 14100 1850 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 14100 1850 50  0001 C CNN "Distributor"
@@ -1385,7 +1370,7 @@ P 10100 2450
 F 0 "R15" V 10100 2400 50  0000 L CNN
 F 1 "3k3" V 10200 2400 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10030 2450 50  0001 C CNN
-F 3 "~" H 10100 2450 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf" H 10100 2450 50  0001 C CNN
 F 4 "TE Connectivity" H 10100 2450 50  0001 C CNN "Mfr."
 F 5 "CRGP0805F3K3" H 10100 2450 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 10100 2450 50  0001 C CNN "Distributor"
@@ -1400,7 +1385,7 @@ P 7750 2500
 F 0 "R14" V 7750 2450 50  0000 L CNN
 F 1 "3k3" V 7850 2450 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7680 2500 50  0001 C CNN
-F 3 "~" H 7750 2500 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf" H 7750 2500 50  0001 C CNN
 F 4 "TE Connectivity" H 7750 2500 50  0001 C CNN "Mfr."
 F 5 "CRGP0805F3K3" H 7750 2500 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 7750 2500 50  0001 C CNN "Distributor"
@@ -1415,7 +1400,7 @@ P 14500 2450
 F 0 "R13" V 14500 2400 50  0000 L CNN
 F 1 "3k3" V 14600 2400 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14430 2450 50  0001 C CNN
-F 3 "~" H 14500 2450 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf" H 14500 2450 50  0001 C CNN
 F 4 "TE Connectivity" H 14500 2450 50  0001 C CNN "Mfr."
 F 5 "CRGP0805F3K3" H 14500 2450 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 14500 2450 50  0001 C CNN "Distributor"
@@ -1484,7 +1469,7 @@ P 13250 2900
 F 0 "R16" V 13250 2850 50  0000 L CNN
 F 1 "270k" V 13350 2850 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 13180 2900 50  0001 C CNN
-F 3 "~" H 13250 2900 50  0001 C CNN
+F 3 "https://www.mouser.de/datasheet/2/418/5/NG_DS_9-1773463-9_A-1358566.pdf" H 13250 2900 50  0001 C CNN
 F 4 "TE Connectivity" H 13250 2900 50  0001 C CNN "Mfr."
 F 5 "CRGP0805F270K" H 13250 2900 50  0001 C CNN "Mfr. No."
 F 6 "Mouser" H 13250 2900 50  0001 C CNN "Distributor"
@@ -1528,8 +1513,8 @@ Text Notes 750  10950 0    100  ~ 0
 VEML6070
 Text Notes 1725 10950 0    100  ~ 0
 0x38
-Text Notes 5450 6300 0    50   ~ 0
-The voltage divider is designed\nfor a 17.8 V solar panel.
+Text Notes 5350 5900 0    50   ~ 0
+The voltage divider is designed\nfor an open circuit voltage of 22.3 V.
 $Comp
 L power:GND #PWR0104
 U 1 1 5F0D963C
@@ -1561,4 +1546,19 @@ Wire Wire Line
 	3350 4200 3650 4200
 Wire Wire Line
 	2400 3800 2400 4350
+$Comp
+L Battery_Management:LT3652EMSE IC2
+U 1 1 5F070109
+P 2400 3300
+F 0 "IC2" H 2050 3750 50  0000 C CNN
+F 1 "LT3652EMSE" H 2250 2850 50  0000 C CNN
+F 2 "Package_SO:MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm" H 2400 2700 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3652fe.pdf" H 3000 2500 50  0001 C CNN
+F 4 "Analog Devices" H 2400 3889 50  0001 C CNN "Mfr."
+F 5 "LT3652EMSE#PBF" H 2400 3300 50  0001 C CNN "Mfr. No."
+F 6 "Mouser" H 2400 3300 50  0001 C CNN "Distributor"
+F 7 "584-LT3652EMSE#PBF" H 2400 3300 50  0001 C CNN "Order Number"
+	1    2400 3300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

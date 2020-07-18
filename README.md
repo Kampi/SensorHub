@@ -143,7 +143,7 @@ The JSON object uses the following structure:
 | **Version**   | **Description** | **Date**   |
 |-------------|---------------------------------------------|----------|
 | 0.1           | Release hardware version 1.1 <br> Firmware version 1.0 <br> Release application version 1.0 | 13.07.2020 |
-| 0.2           | Release hardware version 1.2 <br> Improve firmware and release firmware release 1.1 <br> Release application version 1.1 | 18.07.2020 |
+| 0.2           | Release hardware version 1.2 <br> Improve firmware and release firmware 1.1 <br> Release application version 1.1 | 18.07.2020 |
 
 ## Maintainer
 

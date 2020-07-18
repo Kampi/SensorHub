@@ -111,7 +111,7 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
         return TEMP_SENSOR_FAILURE;
     }
 
-    if(Sensors::_mBH1726.Measure(&AmbientLight))
+    if(Sensors::_mBH1726.Measure(&AmbientLight, BH1726::REG_1))
     {
         Sensors::_mLastError = LIGHT_SENSOR_FAILURE;
         return LIGHT_SENSOR_FAILURE;

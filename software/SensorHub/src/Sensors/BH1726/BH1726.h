@@ -186,9 +186,10 @@ class BH1726
 
         /** @brief          Start a new ambient light measurement.
          *  @param Light    Pointer to measurement result
+         *  @param Channel  Measurement channel
          *  @return         Error code
          */
-        BH1726::Error Measure(uint16_t* Light);
+        BH1726::Error Measure(uint16_t* Light, BH1726::Register Channel);
 
 	private:
         bool _mInitialized;

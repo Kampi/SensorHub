@@ -1,0 +1,11 @@
+{
+    "extensions.ignoreRecommendations": true,
+    "C_Cpp.default.configurationProvider": "particle.particle-vscode-core",
+    "cortex-debug.openocdPath": "${command:particle.getDebuggerOpenocdPath}",
+    "files.associations": {
+        "*.ino": "cpp"
+    },
+    "particle.targetPlatform": "argon",
+    "particle.targetDevice": "e00fce687084bcd4830811a8",
+    "particle.firmwareVersion": "1.5.2"
+}

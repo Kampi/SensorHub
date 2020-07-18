@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sensor Hub</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Ressources.qrc">
+    <normaloff>:/Icons/Ressources/Icons/icons8-3d-touch-96.png</normaloff>:/Icons/Ressources/Icons/icons8-3d-touch-96.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: #FFFFFF;
+}
+</string>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget_Plots">
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="action_About"/>
+    <addaction name="action_AboutQt"/>
+   </widget>
+   <widget class="QMenu" name="menu_Network">
+    <property name="title">
+     <string>Network</string>
+    </property>
+    <addaction name="action_Connect"/>
+    <addaction name="action_Disconnect"/>
+    <addaction name="action_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menu_Language">
+    <property name="title">
+     <string>Language</string>
+    </property>
+    <addaction name="action_EnglishUS"/>
+   </widget>
+   <widget class="QMenu" name="menu_Plot">
+    <property name="title">
+     <string>Chart</string>
+    </property>
+    <addaction name="action_Color"/>
+    <addaction name="action_Export"/>
+   </widget>
+   <widget class="QMenu" name="menu_Application">
+    <property name="title">
+     <string>Application</string>
+    </property>
+    <addaction name="action_StartRecord"/>
+    <addaction name="action_StopRecord"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <addaction name="menu_Application"/>
+   <addaction name="menu_Network"/>
+   <addaction name="menu_Plot"/>
+   <addaction name="menu_Language"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_AboutQt">
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/qt.svg</normaloff>:/Icons/Ressources/Icons/qt.svg</iconset>
+   </property>
+   <property name="text">
+    <string>About Qt...</string>
+   </property>
+  </action>
+  <action name="action_Connect">
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/icons8-connected-24.png</normaloff>:/Icons/Ressources/Icons/icons8-connected-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect...</string>
+   </property>
+  </action>
+  <action name="action_Disconnect">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/icons8-disconnected-24.png</normaloff>:/Icons/Ressources/Icons/icons8-disconnected-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Disconnect...</string>
+   </property>
+  </action>
+  <action name="action_Settings">
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/icons8-tune-24.png</normaloff>:/Icons/Ressources/Icons/icons8-tune-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings...</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/icons8-about-32.png</normaloff>:/Icons/Ressources/Icons/icons8-about-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>About...</string>
+   </property>
+  </action>
+  <action name="action_EnglishUS">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Languages/Ressources/Icons/Languages/en_US.png</normaloff>:/Icons/Languages/Ressources/Icons/Languages/en_US.png</iconset>
+   </property>
+   <property name="text">
+    <string>English (US)</string>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/icons8-exit-24.png</normaloff>:/Icons/Ressources/Icons/icons8-exit-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit...</string>
+   </property>
+  </action>
+  <action name="action_Color">
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/icons8-color-dropper-24.png</normaloff>:/Icons/Ressources/Icons/icons8-color-dropper-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Color...</string>
+   </property>
+  </action>
+  <action name="action_Export">
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/icons8-png-24.png</normaloff>:/Icons/Ressources/Icons/icons8-png-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export..</string>
+   </property>
+  </action>
+  <action name="action_StartRecord">
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/icons8-play-24.png</normaloff>:/Icons/Ressources/Icons/icons8-play-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start record...</string>
+   </property>
+  </action>
+  <action name="action_StopRecord">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Ressources.qrc">
+     <normaloff>:/Icons/Ressources/Icons/icons8-stop-24.png</normaloff>:/Icons/Ressources/Icons/icons8-stop-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop record...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

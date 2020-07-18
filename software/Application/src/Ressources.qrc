@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/Icons">
+        <file>Ressources/Icons/qt.svg</file>
+        <file>Ressources/Icons/icons8-connected-24.png</file>
+        <file>Ressources/Icons/icons8-disconnected-24.png</file>
+        <file>Ressources/Icons/icons8-play-24.png</file>
+        <file>Ressources/Icons/icons8-stop-24.png</file>
+        <file>Ressources/Icons/icons8-exit-24.png</file>
+        <file>Ressources/Icons/icons8-tune-24.png</file>
+        <file>Ressources/Icons/icons8-color-dropper-24.png</file>
+        <file>Ressources/Icons/icons8-png-24.png</file>
+        <file>Ressources/Icons/icons8-thermometer-96.png</file>
+        <file>Ressources/Icons/icons8-hygrometer-96.png</file>
+        <file>Ressources/Icons/icons8-pressure-gauge-96.png</file>
+        <file>Ressources/Icons/icons8-cloud-96.png</file>
+        <file>Ressources/Icons/icons8-sun-96.png</file>
+        <file>Ressources/Icons/icons8-air-96.png</file>
+        <file>Ressources/Icons/icons8-sunlight-96.png</file>
+        <file>Ressources/Icons/icons8-about-32.png</file>
+        <file>Ressources/Icons/icons8-3d-touch-96.png</file>
+        <file>Ressources/Icons/icons8-3d-touch-96.ico</file>
+    </qresource>
+    <qresource prefix="/Icons/Languages">
+        <file>Ressources/Icons/Languages/de_DE.png</file>
+        <file>Ressources/Icons/Languages/en_US.png</file>
+    </qresource>
+    <qresource prefix="/About">
+        <file>Ressources/About/aboutauthor.html</file>
+        <file>Ressources/About/LICENSE</file>
+    </qresource>
+</RCC>

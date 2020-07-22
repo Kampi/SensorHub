@@ -327,7 +327,10 @@ MQTT::Error MQTT::Poll(void)
                         Error = this->_publishReceived(MessageID);
                     }
 
-                    this->_mCallback(TopicLength, (char*)(&this->_mBuffer[FixedHeaderSize + sizeof(TopicLength)]), PayloadLength, (char*)(&this->_mBuffer[FixedHeaderSize + sizeof(TopicLength) + TopicLength + MessageIDLength]), MessageID, QoS, DUP);
+                    if(this->_mCallback)
+                    {
+                        this->_mCallback(TopicLength, (char*)(&this->_mBuffer[FixedHeaderSize + sizeof(TopicLength)]), PayloadLength, (char*)(&this->_mBuffer[FixedHeaderSize + sizeof(TopicLength) + TopicLength + MessageIDLength]), MessageID, QoS, DUP);
+                    }
 
                     return Error;
                 }

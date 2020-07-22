@@ -88,16 +88,16 @@ Sensors::Error Sensors::Initialize(void)
 
     Sensors::_mInitialized = true;
 
-    return Sensors::UpdateData(NULL);
+    return Sensors::UpdateData(NULL, NULL);
 }
 
-Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
+Sensors::Error Sensors::UpdateData(Sensors::SensorData* Sensor, Sensors::SystemData* System)
 {
     uint16_t UV;
     uint16_t AmbientLight;
     BME680_Heater HeaterProfile(0, 320, 200, 0);
 
-    Data->IAQ.Value = 0.0;
+    Sensor->IAQ.Value = 0.0;
 
     if(!Sensors::_mInitialized)
     {
@@ -105,7 +105,7 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
         return COMMUNICATION_ERROR;
     }
 
-    if(Sensors::_mMCP9808.Measure(&Data->Temperature))
+    if(Sensors::_mMCP9808.Measure(&Sensor->Temperature))
     {
         Sensors::_mLastError = TEMP_SENSOR_FAILURE;
         return TEMP_SENSOR_FAILURE;
@@ -118,7 +118,7 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
     }
 
     Sensors::_mBME680.SetMode(BME680::FORCED);
-    if(Sensors::_mBME680.Measure(HeaterProfile, &Data->Environment))
+    if(Sensors::_mBME680.Measure(HeaterProfile, &Sensor->Environment))
     {
         Sensors::_mLastError = ENV_SENSOR_FAILURE;
         return ENV_SENSOR_FAILURE;
@@ -131,17 +131,17 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
     }
 
     // Wait for a stable sensor output before calculating the baseline
-    if(Data->Environment.GasValid == true)
+    if(Sensor->Environment.GasValid == true)
     {
         if(Sensors::_mSamples < IAQ_SAMPLES)
         {
             Sensors::_mSamples++;
             Sensors::_mGasBaseLine += Sensors::_mGasBaseLine / IAQ_SAMPLES;
-            Data->IAQ.Valid = false;
+            Sensor->IAQ.Valid = false;
         }
         else
         {
-            Data->IAQ.Valid = true;
+            Sensor->IAQ.Valid = true;
         }
 
         // Calculate the IAQ index
@@ -149,9 +149,9 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
         double TempCoef = 0.0;
         double HumCoef = 0.0;
         double GasCoef = 0.0;
-        double TempOffset = Data->Temperature - TEMP_BASELINE;
-        double HumOffset = Data->Environment.Humidity - HUM_BASELINE;
-        double GasOffset = Sensors::_mGasBaseLine - Data->Environment.GasResistance;
+        double TempOffset = Sensor->Temperature - TEMP_BASELINE;
+        double HumOffset = Sensor->Environment.Humidity - HUM_BASELINE;
+        double GasOffset = Sensors::_mGasBaseLine - Sensor->Environment.GasResistance;
 
         if(TempOffset > 0.0)
         {
@@ -173,43 +173,43 @@ Sensors::Error Sensors::UpdateData(Sensors::SensorData* Data)
 
         if(GasOffset > 0.0)
         {
-            GasCoef = (Data->Environment.GasResistance / Sensors::_mGasBaseLine) * GAS_WEIGHT;
+            GasCoef = (Sensor->Environment.GasResistance / Sensors::_mGasBaseLine) * GAS_WEIGHT;
         }
         else
         {
             GasCoef = GAS_WEIGHT;
         }
 
-        Data->IAQ.Value = (TempCoef + HumCoef + GasCoef) * 100.0;
+        Sensor->IAQ.Value = (TempCoef + HumCoef + GasCoef) * 100.0;
 
-        if(Data->IAQ.Value < 0.0)
+        if(Sensor->IAQ.Value < 0.0)
         {
-            Data->IAQ.Value = 0.0;
+            Sensor->IAQ.Value = 0.0;
         }
-        else if(Data->IAQ.Value > 100.0)
+        else if(Sensor->IAQ.Value > 100.0)
         {
-            Data->IAQ.Value = 100.0;
+            Sensor->IAQ.Value = 100.0;
         }
     }
 
     // Convert the UV measurement result into the UV index (approximation from the application note)
-    Data->UV = (uint8_t)(0.005 * ((float)UV) - 0.4854);
+    Sensor->UV = (uint8_t)(0.005 * ((float)UV) - 0.4854);
 
-    if(Data->UV < 0)
+    if(Sensor->UV < 0)
     {
-        Data->UV = 0;
+        Sensor->UV = 0;
     }
-    else if(Data->UV > 11)
+    else if(Sensor->UV > 11)
     {
-        Data->UV = 11;
+        Sensor->UV = 11;
     }
 
     // Convert the ambient light measurment result
-    Data->AmbientLight = ((float)AmbientLight) / 4.0;
+    Sensor->AmbientLight = ((float)AmbientLight) / 4.0;
 
     // Get the system voltages
-    Data->SolarVoltage = analogRead(A0) * 0.0008 * (122000 / 22000);
-    Data->BatteryVoltage = analogRead(BATT) * 0.0011224;
+    System->SolarVoltage = analogRead(A0) * 0.0008 * (122000 / 22000);
+    System->BatteryVoltage = analogRead(BATT) * 0.0011224;
 
     Sensors::_mLastError = NO_ERROR;
     return NO_ERROR;

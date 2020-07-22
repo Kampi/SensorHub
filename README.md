@@ -69,7 +69,7 @@ Done! Your device should now restart.
 - Power up the `SensorHub` and flash the firmware from `software/release` by using the [Particle CLI](https://docs.particle.io/tutorials/developer-tools/cli/#flashing-over-serial-for-the-electron).
 - Hold the `MODE` button of the microcontroller module to enter the setup mode.
 - After entering the setup mode the RGB LED of the device will lights up red.
-- Open the app and connect your smartphone with the `SensorHub`. When the connection is successful the RGB LED of the `SensorHub` starts to blink green until you close the connection or a IP address of the MQTT broker was transmitted successfully.
+- Open the app and connect your smartphone with the `SensorHub`. When the connection is successful the RGB LED of the `SensorHub` starts to blink green until. The device is now ready for configuration until you close the connection.
 
 ## Device modes
 
@@ -101,12 +101,15 @@ The firmware use the following UUIDs for the bluetooth low energy service:
 |:------------------------------------:|:---------:|
 | b4250401-fb4b-4746-b2b0-93f0e61122c6 | General service UUID for the BLE service. |
 | b4250402-fb4b-4746-b2b0-93f0e61122c6 | Server IP UUID to configure the IP address of the MQTT server. |
+| b4250403-fb4b-4746-b2b0-93f0e61122c6 | Sleep time UUID to configure the sleep time of the firmware. |
 
 ## Measurement
 
 After a successful configuration and initialization the device will enter the sleep mode. The microcontroller is woken up every three minutes to read in new data from the sensors. After a successful read of the
-sensors the data gets packed in a [JSON](https://www.json.org/json-en.html) structure and published by using the [MQTT](http://mqtt.org/) protocol. The firmware uses the topic `sensorhub/weather` to publish the sensor data in the network.
-The JSON object uses the following structure:
+sensors the data gets packed in a [JSON](https://www.json.org/json-en.html) structure and published by using the [MQTT](http://mqtt.org/) protocol. The firmware uses the topics `sensorhub/weather` to publish the sensor data and the topics `sensorhub/system` and `sensorhub/errors` to publish system messages in the network.
+The JSON objects uses the following structure:
+
+`sensorhub/weather`:
 
 ```json
 {
@@ -119,9 +122,22 @@ The JSON object uses the following structure:
   "Gas valid": "0",
   "IAQ": "97.5",
   "IAQ valid": "0",
+}
+```
+
+`sensorhub/system`:
+
+```json
+{
   "Solar": "1.2",
   "Battery": "3.3"
 }
+```
+
+`sensorhub/errors`:
+
+```txt
+This is an error message
 ```
 
 | **Element**    | **Description** |
@@ -144,6 +160,7 @@ The JSON object uses the following structure:
 |-------------|---------------------------------------------|----------|
 | 0.1           | Release hardware version 1.1 <br> Firmware version 1.0 <br> Release application version 1.0 | 13.07.2020 |
 | 0.2           | Release hardware version 1.2 <br> Improve firmware and release firmware 1.1 <br> Release application version 1.1 | 18.07.2020 |
+| 0.2           | Release firmware 1.2 |  |
 
 ## Maintainer
 

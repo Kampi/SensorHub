@@ -25,12 +25,17 @@
 #include "Network.h"
 
 #define NETWORK_IP_LOC                  0x00
+#define NETWORK_SLEEP_LOC               0x00 + sizeof(IPAddress)
+
+#define NETWORK_DEFAULT_SLEEP           0x03
 
 // Bluetooth service UUID
 static const char* ServiceUUID = "b4250401-fb4b-4746-b2b0-93f0e61122c6";
 static const char* ServerUUID = "b4250402-fb4b-4746-b2b0-93f0e61122c6";
+static const char* SleepUUID = "b4250403-fb4b-4746-b2b0-93f0e61122c6";
 
 BleCharacteristic Network::_mServerIPCharacteristic("Server address", BleCharacteristicProperty::WRITE_WO_RSP, ServerUUID, BleUuid(ServiceUUID), &Network::_bluetoothDataReceived, (void*)ServerUUID);
+BleCharacteristic Network::_mSleepCharacteristic("Sleep time [min]", BleCharacteristicProperty::WRITE_WO_RSP, SleepUUID, BleUuid(SleepUUID), &Network::_bluetoothDataReceived, (void*)SleepUUID);
 BleAdvertisingData Network::_mBluetoothAdvertise;
 
 MQTT Network::_mClient;
@@ -38,30 +43,16 @@ IPAddress Network::_mServerAddress;
 
 Network::Error Network::_mLastError;
 
+uint8_t Network::_mSleepTime;
+
 Network::Error Network::lastError(void)
 {
     return Network::_mLastError;
 }
 
-void Network::_callback(uint16_t TopicLength, char* Topic, uint16_t PayloadLength, char* Payload, uint16_t ID, MQTT::QoS QoS, bool DUP)
+uint32_t Network::sleepTime(void)
 {
-    Serial.printlnf("Topic lenght: %i", TopicLength);
-    for(uint8_t i = 0x00; i < TopicLength; i++)
-    {
-        Serial.print(Topic[i]);
-    }
-    Serial.println();
-
-    Serial.printlnf("Payload lenght: %i", PayloadLength);
-    for(uint8_t i = 0x00; i < PayloadLength; i++)
-    {
-        Serial.print(Payload[i]);
-    }
-
-    Serial.println();
-    Serial.printlnf("QoS: %i", QoS);
-    Serial.printlnf("ID: %i", ID);
-    Serial.printlnf("DUP: %i", DUP);
+    return Network::_mSleepTime * 60 * 1000;
 }
 
 void Network::_bluetoothDataReceived(const uint8_t* Data, size_t Length, const BlePeerDevice& Peer, void* Context)
@@ -72,10 +63,22 @@ void Network::_bluetoothDataReceived(const uint8_t* Data, size_t Length, const B
         {
             Network::_mServerAddress = IPAddress(Data[0], Data[1], Data[2], Data[3]);
 
-            Serial.printlnf("[INFO] Set IP address to: %i.%i.%i.%i", Data[0], Data[1], Data[2], Data[3]);
+            Serial.printlnf("[CONFIG] Set IP address to: %i.%i.%i.%i", Data[0], Data[1], Data[2], Data[3]);
 
             // Save the IP address in the EEPROM
             EEPROM.put(NETWORK_IP_LOC, Network::_mServerAddress);
+        }
+    }
+    else if(Context == SleepUUID)
+    {
+        if(Length == 0x01)
+        {
+            Network::_mSleepTime = Data[0];
+
+            Serial.printlnf("[CONFIG] Set sleep time to: %i minutes", Data[0]);
+
+            // Save the sleep time in the EEPROM
+            EEPROM.put(NETWORK_SLEEP_LOC, Network::_mSleepTime);
         }
     }
 }
@@ -103,10 +106,16 @@ Network::Error Network::Initialize(void)
 
     // Load the settings from the EEPROM
     EEPROM.get(NETWORK_IP_LOC, Network::_mServerAddress);
+    EEPROM.get(NETWORK_SLEEP_LOC, Network::_mSleepTime);
+
+    // Use the default sleep time when the EEPROM is empty
+    if(Network::_mSleepTime == 0xFF)
+    {
+        Network::_mSleepTime = NETWORK_DEFAULT_SLEEP;
+    }
 
     // Configure the MQTT client
     Network::_mClient.SetBroker(Network::_mServerAddress);
-    Network::_mClient.SetCallback(Network::_callback);
 
     Network::_mLastError = NO_ERROR;
     return NO_ERROR;
@@ -114,21 +123,18 @@ Network::Error Network::Initialize(void)
 
 Network::Error Network::Connect(uint32_t Timeout)
 {
-    if(!Network::_mClient.isConnected())
+    WiFi.on();
+    WiFi.connect();
+    if(!waitFor(WiFi.ready, Timeout))
     {
-        WiFi.on();
-        WiFi.connect();
-        if(!waitFor(WiFi.ready, Timeout))
-        {
-            Network::_mLastError = TIMEOUT;
-            return TIMEOUT;
-        }
+        Network::_mLastError = TIMEOUT;
+        return TIMEOUT;
+    }
 
-        if(Network::_mClient.Connect("SensorHub", false))
-        {
-            Network::_mLastError = CONNECTION_ERROR;
-            return CONNECTION_ERROR;
-        }
+    if(Network::_mClient.Connect("SensorHub", false))
+    {
+        Network::_mLastError = CONNECTION_ERROR;
+        return CONNECTION_ERROR;
     }
 
     Network::_mLastError = NO_ERROR;
@@ -168,6 +174,7 @@ Network::Error Network::Setup(uint32_t Timeout)
 
     Network::_mBluetoothAdvertise.appendServiceUUID(BleUuid(ServiceUUID));
     BLE.addCharacteristic(_mServerIPCharacteristic);
+    BLE.addCharacteristic(_mSleepCharacteristic);
     BLE.advertise(&Network::_mBluetoothAdvertise);
 
     // Wait for a bluetooth connection

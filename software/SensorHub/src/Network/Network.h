@@ -41,6 +41,7 @@ class Network
         } Error;
 
         static Network::Error lastError(void);
+        static uint32_t sleepTime(void);
 
 		static Network::Error Initialize(void);
         static Network::Error Connect(uint32_t Timeout);
@@ -55,7 +56,10 @@ class Network
 
         static Network::Error _mLastError;
 
+        static uint8_t _mSleepTime;
+
         static BleCharacteristic _mServerIPCharacteristic;
+        static BleCharacteristic _mSleepCharacteristic;
         static BleAdvertisingData _mBluetoothAdvertise;
 
         static void _callback(uint16_t TopicLength, char* Topic, uint16_t PayloadLength, char* Payload, uint16_t ID, MQTT::QoS QoS, bool DUP);

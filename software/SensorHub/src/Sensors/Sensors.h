@@ -56,15 +56,19 @@ class Sensors
                 bool Valid;
             } IAQ;
             uint8_t UV;
+        } SensorData;
+
+        typedef struct
+        {
             float SolarVoltage;
             float BatteryVoltage;
-        } SensorData;
+        } SystemData;
 
         static Sensors::Error lastError(void);
         static bool initialized(void);
 
 		static Sensors::Error Initialize(void);
-        static Sensors::Error UpdateData(Sensors::SensorData* Data);
+        static Sensors::Error UpdateData(Sensors::SensorData* Data, Sensors::SystemData* System);
 
 	private:
         static bool _mInitialized;

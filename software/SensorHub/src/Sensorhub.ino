@@ -27,12 +27,13 @@
 #include "ErrorClass/ErrorClass.h"
 
 #define FIRMWARE_MAJOR                  1
-#define FIRMWARE_MINOR                  0
+#define FIRMWARE_MINOR                  2
 #define FIRMWARE_REVISION               0
 
 #define TIMEOUT                         60000
 
-char Buffer[200];
+char SensorBuffer[200];
+char SystemBuffer[200];
 
 SystemSleepConfiguration SleepConfig;
 
@@ -42,6 +43,10 @@ SYSTEM_THREAD(ENABLED);
 void setup()
 {
     delay(3000);
+
+    // Disable LED D7
+    pinMode(D7, OUTPUT);
+    digitalWrite(D7, LOW);
 
     Serial.begin(9600);
 
@@ -77,9 +82,9 @@ void setup()
         }
     }
 
-    SleepConfig.mode(SystemSleepMode::STOP).duration(180s);
-
     Serial.println("[INFO] Initialization successful! Starting...");
+    Serial.printlnf("[INFO] Sleeping for %i seconds", Network::sleepTime());
+    SleepConfig.mode(SystemSleepMode::STOP).duration(Network::sleepTime());
     delay(3000);
 }
 
@@ -89,25 +94,35 @@ void loop()
 
     if(Network::Connect(TIMEOUT) == Network::NO_ERROR)
     {
-        Sensors::SensorData Data;
-        JSONBufferWriter Writer(Buffer, sizeof(Buffer));
+        Sensors::SensorData SensorData;
+        Sensors::SystemData SystemData;
 
-        if(Sensors::UpdateData(&Data) == Sensors::NO_ERROR)
+        if(Sensors::UpdateData(&SensorData, &SystemData) == Sensors::NO_ERROR)
         {
-            memset(Buffer, 0x00, sizeof(Buffer));
-            Writer.beginObject();
-                Writer.name("Temperature").value(Data.Temperature);
-                Writer.name("Ambient light").value(Data.AmbientLight);
-                Writer.name("UV").value(Data.UV);
-                Writer.name("Pressure").value(Data.Environment.Pressure);
-                Writer.name("Humidity").value(Data.Environment.Humidity);
-                Writer.name("Gas resistance").value(Data.Environment.GasResistance);
-                Writer.name("Gas valid").value(Data.Environment.GasValid);
-                Writer.name("IAQ").value(Data.IAQ.Value);
-                Writer.name("IAQ valid").value(Data.IAQ.Valid);
-            Writer.endObject();
+            JSONBufferWriter SensorWriter(SensorBuffer, sizeof(SensorBuffer));
+            JSONBufferWriter SystemWriter(SystemBuffer, sizeof(SystemBuffer));
 
-            Network::Publish("sensorhub/weather", Buffer, sizeof(Buffer));
+            memset(SensorBuffer, 0x00, sizeof(SensorBuffer));
+            memset(SystemBuffer, 0x00, sizeof(SystemBuffer));
+            SensorWriter.beginObject();
+                SensorWriter.name("Temperature").value(SensorData.Temperature);
+                SensorWriter.name("Ambient light").value(SensorData.AmbientLight);
+                SensorWriter.name("UV").value(SensorData.UV);
+                SensorWriter.name("Pressure").value(SensorData.Environment.Pressure);
+                SensorWriter.name("Humidity").value(SensorData.Environment.Humidity);
+                SensorWriter.name("Gas resistance").value(SensorData.Environment.GasResistance);
+                SensorWriter.name("Gas valid").value(SensorData.Environment.GasValid);
+                SensorWriter.name("IAQ").value(SensorData.IAQ.Value);
+                SensorWriter.name("IAQ valid").value(SensorData.IAQ.Valid);
+            SensorWriter.endObject();
+
+            SystemWriter.beginObject();
+                SystemWriter.name("Solar").value(SystemData.SolarVoltage);
+                SystemWriter.name("Battery").value(SystemData.BatteryVoltage);
+            SystemWriter.endObject();
+
+            Network::Publish("sensorhub/weather", SensorBuffer, sizeof(SensorBuffer));
+            Network::Publish("sensorhub/system", SystemBuffer, sizeof(SystemBuffer));
         }
         else
         {
@@ -115,11 +130,11 @@ void loop()
             String Message(Sensors::lastError());
             Network::Publish("sensorhub/errors", Message);
         }
-
-        Network::Disconnect();
     }
     else
     {
         ErrorClass::DisplayError(ErrorClass::ERROR_NETWORK, Network::lastError());
     }
+
+    Network::Disconnect();
 }

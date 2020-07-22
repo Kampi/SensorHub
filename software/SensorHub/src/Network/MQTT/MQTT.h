@@ -29,7 +29,7 @@
  *		   when you need more information.
  *
  *  @author Daniel Kampert
- *  @bug - Improve code to support larger messages than 256 bytes (needs a lot of rework :/)
+ *  @bug - Improve code to support larger messages than 236 bytes (needs a lot of rework :/)
  */
 
 #include "application.h"

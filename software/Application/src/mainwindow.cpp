@@ -84,12 +84,22 @@ void MainWindow::MQTT_Received(const QByteArray& message, const QMqttTopicName&)
                      doc.object().value("Humidity").toDouble(),
                      doc.object().value("Ambient light").toDouble(),
                      doc.object().value("UV").toInt(),
-                     doc.object().value("IAQ").toDouble()
+                     doc.object().value("IAQ").toDouble(),
+                     doc.object().value("IAQ valid").toBool(),
+                     doc.object().value("Gas").toDouble(),
+                     doc.object().value("Gas valid").toBool(),
+                     doc.object().value("Solar").toDouble(),
+                     doc.object().value("Battery").toDouble()
                      );
 
     if(this->_mLoggingActive)
     {
         QString Message = QString("%1;" + Data.toCSV()).arg(QDateTime::currentDateTime().toSecsSinceEpoch());
+
+        #ifdef QT_DEBUG
+            qDebug() << "Logging: " << Message;
+        #endif
+
         this->_appendLog(Message);
     }
 
@@ -105,15 +115,7 @@ void MainWindow::MQTT_Received(const QByteArray& message, const QMqttTopicName&)
 
 void MainWindow::on_action_Connect_triggered()
 {
-    if(this->_mClient->state() == QMqttClient::Disconnected)
-    {
-        this->_mUi->action_Connect->setEnabled(false);
-        this->_mUi->action_Settings->setEnabled(false);
-        this->_mUi->action_Disconnect->setEnabled(true);
-        this->_mClient->setHostname(this->_mIp);
-        this->_mClient->setPort(this->_mPort);
-        this->_mClient->connectToHost();
-    }
+    this->_connect();
 }
 
 void MainWindow::on_action_Disconnect_triggered()
@@ -157,9 +159,9 @@ void MainWindow::on_action_Color_triggered()
 
 void MainWindow::on_action_StopRecord_triggered()
 {
-    this->_mLoggingActive = false;
     this->_mUi->action_StartRecord->setEnabled(true);
     this->_mUi->action_StopRecord->setEnabled(false);
+    this->_mLoggingActive = false;
 }
 
 void MainWindow::on_action_StartRecord_triggered()
@@ -170,6 +172,9 @@ void MainWindow::on_action_StartRecord_triggered()
     {
         this->_mLog = FileName + ".csv";
         this->_createLog(this->_mLog);
+        this->_mUi->action_StartRecord->setEnabled(false);
+        this->_mUi->action_StopRecord->setEnabled(true);
+        this->_mLoggingActive = true;
     }
 }
 
@@ -199,6 +204,20 @@ void MainWindow::closeEvent(QCloseEvent* event)
     QMainWindow::closeEvent(event);
 }
 
+void MainWindow::_connect(void)
+{
+    if(this->_mClient->state() == QMqttClient::Disconnected)
+    {
+        this->_mUi->action_Connect->setEnabled(false);
+        this->_mUi->action_Settings->setEnabled(false);
+        this->_mUi->action_Disconnect->setEnabled(true);
+        this->_mUi->action_StartRecord->setEnabled(true);
+        this->_mClient->setHostname(this->_mIp);
+        this->_mClient->setPort(this->_mPort);
+        this->_mClient->connectToHost();
+    }
+}
+
 void MainWindow::_disconnect(void)
 {
     if(this->_mClient->state() == QMqttClient::Connected)
@@ -207,6 +226,7 @@ void MainWindow::_disconnect(void)
     }
 
     this->_mUi->action_Disconnect->setEnabled(false);
+    this->_mUi->action_StartRecord->setEnabled(false);
     this->_mUi->action_Connect->setEnabled(true);
     this->_mUi->action_Settings->setEnabled(true);
     this->_mUi->statusBar->showMessage(tr("Disconnected"));
@@ -217,7 +237,7 @@ void MainWindow::_createLog(QString Path)
     QFile CSV(Path);
     CSV.open(QIODevice::WriteOnly);
     QTextStream Out(&CSV);
-    Out << "Date;Temperature;Pressure;Humidity;Ambient light;UV;IAQ";
+    Out << "Date;Temperature;Pressure;Humidity;Ambient light;UV;IAQ;IAQ valid;Gas;Gas valid;Solar;Battery";
     endl(Out);
     CSV.close();
 }

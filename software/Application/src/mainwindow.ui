@@ -85,8 +85,8 @@
     <addaction name="action_StopRecord"/>
     <addaction name="action_Exit"/>
    </widget>
-   <addaction name="menu_Application"/>
    <addaction name="menu_Network"/>
+   <addaction name="menu_Application"/>
    <addaction name="menu_Plot"/>
    <addaction name="menu_Language"/>
    <addaction name="menu_Help"/>
@@ -188,6 +188,9 @@
    </property>
   </action>
   <action name="action_StartRecord">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="Ressources.qrc">
      <normaloff>:/Icons/Ressources/Icons/icons8-play-24.png</normaloff>:/Icons/Ressources/Icons/icons8-play-24.png</iconset>

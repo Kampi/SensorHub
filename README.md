@@ -100,8 +100,9 @@ The firmware use the following UUIDs for the bluetooth low energy service:
 | **UUID** | **Description** |
 |:------------------------------------:|:---------:|
 | b4250401-fb4b-4746-b2b0-93f0e61122c6 | General service UUID for the BLE service. |
-| b4250402-fb4b-4746-b2b0-93f0e61122c6 | Server IP UUID to configure the IP address of the MQTT server. |
-| b4250403-fb4b-4746-b2b0-93f0e61122c6 | Sleep time UUID to configure the sleep time of the firmware. |
+| b4250402-fb4b-4746-b2b0-93f0e61122c6 | MQTT broker IP UUID to configure the IP address of the MQTT broker. |
+| b4250403-fb4b-4746-b2b0-93f0e61122c6 | MQTT broker port UUID to configure the port of the MQTT broker. |
+| b4250404-fb4b-4746-b2b0-93f0e61122c6 | Sleep time UUID to configure the sleep time of the firmware. |
 
 ## Measurement
 

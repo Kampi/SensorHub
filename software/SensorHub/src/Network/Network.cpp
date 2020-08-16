@@ -25,16 +25,19 @@
 #include "Network.h"
 
 #define NETWORK_IP_LOC                  0x00
-#define NETWORK_SLEEP_LOC               0x00 + sizeof(IPAddress)
+#define NETWORK_PORT_LOC                0x00 + sizeof(IPAddress)
+#define NETWORK_SLEEP_LOC               0x00 + sizeof(IPAddress) + sizeof(uint16_t)
 
-#define NETWORK_DEFAULT_SLEEP           0x03
+#define NETWORK_DEFAULT_SLEEP           3
 
 // Bluetooth service UUID
 static const char* ServiceUUID = "b4250401-fb4b-4746-b2b0-93f0e61122c6";
 static const char* ServerUUID = "b4250402-fb4b-4746-b2b0-93f0e61122c6";
-static const char* SleepUUID = "b4250403-fb4b-4746-b2b0-93f0e61122c6";
+static const char* ServerPortUUID = "b4250403-fb4b-4746-b2b0-93f0e61122c6";
+static const char* SleepUUID = "b4250404-fb4b-4746-b2b0-93f0e61122c6";
 
 BleCharacteristic Network::_mServerIPCharacteristic("Server address", BleCharacteristicProperty::WRITE_WO_RSP, ServerUUID, BleUuid(ServiceUUID), &Network::_bluetoothDataReceived, (void*)ServerUUID);
+BleCharacteristic Network::_mServerPortCharacteristic("Server port", BleCharacteristicProperty::WRITE_WO_RSP, ServerPortUUID, BleUuid(ServiceUUID), &Network::_bluetoothDataReceived, (void*)ServerPortUUID);
 BleCharacteristic Network::_mSleepCharacteristic("Sleep time [min]", BleCharacteristicProperty::WRITE_WO_RSP, SleepUUID, BleUuid(SleepUUID), &Network::_bluetoothDataReceived, (void*)SleepUUID);
 BleAdvertisingData Network::_mBluetoothAdvertise;
 
@@ -44,6 +47,8 @@ IPAddress Network::_mServerAddress;
 Network::Error Network::_mLastError;
 
 uint8_t Network::_mSleepTime;
+
+uint16_t Network::_mServerPort;
 
 Network::Error Network::lastError(void)
 {
@@ -63,7 +68,7 @@ void Network::_bluetoothDataReceived(const uint8_t* Data, size_t Length, const B
         {
             Network::_mServerAddress = IPAddress(Data[0], Data[1], Data[2], Data[3]);
 
-            Serial.printlnf("[CONFIG] Set IP address to: %i.%i.%i.%i", Data[0], Data[1], Data[2], Data[3]);
+            Serial.printlnf("[CONFIG] Set IP address to: %d.%d.%d.%d", Network::_mServerAddress[0], Network::_mServerAddress[1], Network::_mServerAddress[2], Network::_mServerAddress[3]);
 
             // Save the IP address in the EEPROM
             EEPROM.put(NETWORK_IP_LOC, Network::_mServerAddress);
@@ -75,10 +80,22 @@ void Network::_bluetoothDataReceived(const uint8_t* Data, size_t Length, const B
         {
             Network::_mSleepTime = Data[0];
 
-            Serial.printlnf("[CONFIG] Set sleep time to: %i minutes", Data[0]);
+            Serial.printlnf("[CONFIG] Set sleep time to: %i minutes", Network::_mSleepTime);
 
             // Save the sleep time in the EEPROM
             EEPROM.put(NETWORK_SLEEP_LOC, Network::_mSleepTime);
+        }
+    }
+    else if(Context == ServerPortUUID)
+    {
+        if(Length == 0x02)
+        {
+            Network::_mServerPort = ((uint16_t)(Data[1] << 0x08)) | Data[0];
+
+            Serial.printlnf("[CONFIG] Set server port to: %i", Network::_mServerPort);
+
+            // Save the sleep time in the EEPROM
+            EEPROM.put(NETWORK_PORT_LOC, Network::_mServerPort);
         }
     }
 }
@@ -95,9 +112,9 @@ Network::Error Network::Initialize(void)
         return NO_WIFI_CREDENTIALS;
     }
 
-    Found = WiFi.getCredentials(AP, 5);
+    Found = WiFi.getCredentials(AP, 0x05);
     Serial.printlnf("[INFO] Found %i WiFi credentials", Found);
-    for(int i = 0; i < Found; i++)
+    for(int i = 0x00; i < Found; i++)
     {
         Serial.printlnf("   SSID: %s", AP[i].ssid);
         Serial.printlnf("   Security: %i", AP[i].security);
@@ -107,6 +124,7 @@ Network::Error Network::Initialize(void)
     // Load the settings from the EEPROM
     EEPROM.get(NETWORK_IP_LOC, Network::_mServerAddress);
     EEPROM.get(NETWORK_SLEEP_LOC, Network::_mSleepTime);
+    EEPROM.get(NETWORK_PORT_LOC, Network::_mServerPort);
 
     // Use the default sleep time when the EEPROM is empty
     if(Network::_mSleepTime == 0xFF)
@@ -115,7 +133,8 @@ Network::Error Network::Initialize(void)
     }
 
     // Configure the MQTT client
-    Network::_mClient.SetBroker(Network::_mServerAddress);
+    Serial.printlnf("[INFO] Broker address: %d.%d.%d.%d:%i", Network::_mServerAddress[0], Network::_mServerAddress[1], Network::_mServerAddress[2], Network::_mServerAddress[3], Network::_mServerPort);
+    Network::_mClient.SetBroker(Network::_mServerAddress, Network::_mServerPort);
 
     Network::_mLastError = NO_ERROR;
     return NO_ERROR;
@@ -131,8 +150,14 @@ Network::Error Network::Connect(uint32_t Timeout)
         return TIMEOUT;
     }
 
-    if(Network::_mClient.Connect("SensorHub", false))
+    MQTT::Error Error = Network::_mClient.Connect("SensorHub", false);
+    if(Error)
     {
+        if(Error == MQTT::HOST_UNREACHABLE)
+        {
+            Serial.printlnf("[ERROR] Host unreachable: %d", Network::_mClient.connectionState());
+        }
+
         Network::_mLastError = CONNECTION_ERROR;
         return CONNECTION_ERROR;
     }
@@ -155,7 +180,9 @@ Network::Error Network::Publish(const char* Topic, String Message)
 
 Network::Error Network::Publish(const char* Topic, char* Buffer, uint8_t Length)
 {
-    if(Network::_mClient.Publish(Topic, Buffer, Length))
+    uint16_t ID;
+
+    if(Network::_mClient.Publish(Topic, (uint8_t*)Buffer, Length, &ID, MQTT::QOS_1))
     {
         Network::_mLastError = CONNECTION_ERROR;
         return CONNECTION_ERROR;
@@ -168,13 +195,15 @@ Network::Error Network::Publish(const char* Topic, char* Buffer, uint8_t Length)
 Network::Error Network::Setup(uint32_t Timeout)
 {
     RGB.control(true);
-
     RGB.color(0xFF, 0xFF, 0xFF);
+
     Serial.println("[INFO] Enter setup mode...");
 
+    BLE.addCharacteristic(Network::_mServerIPCharacteristic);
+    BLE.addCharacteristic(Network::_mServerPortCharacteristic);
+    BLE.addCharacteristic(Network::_mSleepCharacteristic);
+
     Network::_mBluetoothAdvertise.appendServiceUUID(BleUuid(ServiceUUID));
-    BLE.addCharacteristic(_mServerIPCharacteristic);
-    BLE.addCharacteristic(_mSleepCharacteristic);
     BLE.advertise(&Network::_mBluetoothAdvertise);
 
     // Wait for a bluetooth connection

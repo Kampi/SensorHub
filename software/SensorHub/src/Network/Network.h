@@ -58,9 +58,12 @@ class Network
 
         static uint8_t _mSleepTime;
 
+        static uint16_t _mServerPort;
+
         static BleCharacteristic _mServerIPCharacteristic;
         static BleCharacteristic _mSleepCharacteristic;
         static BleAdvertisingData _mBluetoothAdvertise;
+        static BleCharacteristic _mServerPortCharacteristic;
 
         static void _callback(uint16_t TopicLength, char* Topic, uint16_t PayloadLength, char* Payload, uint16_t ID, MQTT::QoS QoS, bool DUP);
         static void _bluetoothDataReceived(const uint8_t* data, size_t len, const BlePeerDevice& peer, void* context);

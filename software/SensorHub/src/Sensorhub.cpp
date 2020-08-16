@@ -91,8 +91,8 @@ void setup()
         }
     }
 
+    Serial.printlnf("[INFO] Sleeping for %i seconds", Network::sleepTime() / 1000);
     Serial.println("[INFO] Initialization successful! Starting...");
-    Serial.printlnf("[INFO] Sleeping for %i seconds", Network::sleepTime());
     SleepConfig.mode(SystemSleepMode::STOP).duration(Network::sleepTime());
     delay(3000);
 }
